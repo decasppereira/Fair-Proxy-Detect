@@ -1,0 +1,16 @@
+Non-Protected Features: 
+	Workclass
+	Education
+	Marital Status
+	Occupation
+	Relationship
+	Capital Gain
+	Capital Loss
+	Hours per week
+	Country
+Protected Features: 
+	Age
+	Race
+	Sex
+==================== Searching for Categorical Equivalence ==================
+

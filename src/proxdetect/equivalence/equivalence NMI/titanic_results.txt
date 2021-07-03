@@ -1,0 +1,11 @@
+Non-Protected Features: 
+	Pclass
+	Name
+	Siblings/Spouses Aboard
+	Parents/Children Aboard
+	Fare
+Protected Features: 
+	Sex
+	Age
+==================== Searching for Categorical Equivalence ==================
+

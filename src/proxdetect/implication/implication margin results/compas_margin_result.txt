@@ -1,0 +1,471 @@
+Non-Protected Features: 
+	Number_of_Priors
+	score_factor
+	Age_Above_FourtyFive
+	Age_Below_TwentyFive
+	Misdemeanor
+Protected Features: 
+	African_American
+	Asian
+	Hispanic
+	Native_American
+	Other
+	Female
+==================== Searching for Categorical Implication ==================
+
+Searching proxies for feature African_American
+	 Feature Number_of_Priors:
+		0 imples 0 0.5942446043165468 of times
+		0 imples 1 0.40575539568345326 of times
+		4 imples 1 0.583596214511041 of times
+		4 imples 0 0.416403785488959 of times
+		14 imples 0 0.1956521739130435 of times
+		14 imples 1 0.8043478260869565 of times
+		3 imples 0 0.4699570815450644 of times
+		3 imples 1 0.5300429184549357 of times
+		1 imples 0 0.5190434012400355 of times
+		1 imples 1 0.48095659875996455 of times
+		7 imples 1 0.6705202312138728 of times
+		7 imples 0 0.32947976878612717 of times
+		6 imples 0 0.39487179487179486 of times
+		6 imples 1 0.6051282051282051 of times
+		5 imples 0 0.41025641025641024 of times
+		5 imples 1 0.5897435897435898 of times
+		13 imples 1 0.7619047619047619 of times
+		13 imples 0 0.23809523809523808 of times
+		8 imples 1 0.7013888888888888 of times
+		8 imples 0 0.2986111111111111 of times
+		9 imples 0 0.3700787401574803 of times
+		9 imples 1 0.6299212598425197 of times
+		21 imples 1 0.9444444444444444 of times
+		21 imples 0 0.05555555555555555 of times
+		2 imples 1 0.47723935389133626 of times
+		2 imples 0 0.5227606461086637 of times
+		15 imples 1 0.8571428571428571 of times
+		15 imples 0 0.14285714285714285 of times
+		10 imples 1 0.7111111111111111 of times
+		10 imples 0 0.28888888888888886 of times
+		28 imples 1 0.6 of times
+		28 imples 0 0.4 of times
+		19 imples 1 0.875 of times
+		19 imples 0 0.125 of times
+		11 imples 1 0.7236842105263158 of times
+		11 imples 0 0.27631578947368424 of times
+		23 imples 1 0.8461538461538461 of times
+		23 imples 0 0.15384615384615385 of times
+		25 imples 1 1.0 of times
+		36 imples 0 1.0 of times
+		12 imples 1 0.8113207547169812 of times
+		12 imples 0 0.18867924528301888 of times
+		20 imples 0 0.3333333333333333 of times
+		20 imples 1 0.6666666666666666 of times
+		33 imples 1 0.5 of times
+		33 imples 0 0.5 of times
+		16 imples 1 0.8064516129032258 of times
+		16 imples 0 0.1935483870967742 of times
+		18 imples 1 0.8333333333333334 of times
+		18 imples 0 0.16666666666666666 of times
+		17 imples 1 0.75 of times
+		17 imples 0 0.25 of times
+		22 imples 0 0.1875 of times
+		22 imples 1 0.8125 of times
+		30 imples 0 1.0 of times
+		24 imples 1 0.9 of times
+		24 imples 0 0.1 of times
+		27 imples 1 0.8333333333333334 of times
+		27 imples 0 0.16666666666666666 of times
+		26 imples 1 0.5 of times
+		26 imples 0 0.5 of times
+		37 imples 1 1.0 of times
+		29 imples 1 1.0 of times
+		31 imples 0 0.5 of times
+		31 imples 1 0.5 of times
+		38 imples 1 1.0 of times
+	 Feature score_factor:
+		0 imples 0 0.6065477930429699 of times
+		0 imples 1 0.3934522069570301 of times
+		1 imples 0 0.3351508542348237 of times
+		1 imples 1 0.6648491457651763 of times
+	 Feature Age_Above_FourtyFive:
+		1 imples 0 0.6380510440835266 of times
+		1 imples 1 0.3619489559164733 of times
+		0 imples 1 0.5548268087722894 of times
+		0 imples 0 0.4451731912277106 of times
+	 Feature Age_Below_TwentyFive:
+		0 imples 0 0.5096373056994818 of times
+		0 imples 1 0.49036269430051815 of times
+		1 imples 1 0.6005939123979213 of times
+		1 imples 0 0.3994060876020787 of times
+	 Feature Misdemeanor:
+		0 imples 0 0.44685138539042824 of times
+		0 imples 1 0.5531486146095718 of times
+		1 imples 0 0.5554041780199819 of times
+		1 imples 1 0.4445958219800182 of times
+Searching proxies for feature Asian
+	 Feature Number_of_Priors:
+		0 imples 0 0.9918465227817745 of times
+		0 imples 1 0.00815347721822542 of times
+		4 imples 0 1.0 of times
+		14 imples 0 1.0 of times
+		3 imples 0 0.9978540772532188 of times
+		3 imples 1 0.002145922746781116 of times
+		1 imples 0 0.995571302037201 of times
+		1 imples 1 0.0044286979627989375 of times
+		7 imples 0 1.0 of times
+		6 imples 0 0.9897435897435898 of times
+		6 imples 1 0.010256410256410256 of times
+		5 imples 0 0.9963369963369964 of times
+		5 imples 1 0.003663003663003663 of times
+		13 imples 0 1.0 of times
+		8 imples 0 1.0 of times
+		9 imples 0 0.9921259842519685 of times
+		9 imples 1 0.007874015748031496 of times
+		21 imples 0 1.0 of times
+		2 imples 0 0.9941262848751835 of times
+		2 imples 1 0.005873715124816446 of times
+		15 imples 0 1.0 of times
+		10 imples 0 1.0 of times
+		28 imples 0 1.0 of times
+		19 imples 0 1.0 of times
+		11 imples 0 1.0 of times
+		23 imples 0 1.0 of times
+		25 imples 0 1.0 of times
+		36 imples 0 1.0 of times
+		12 imples 0 1.0 of times
+		20 imples 0 1.0 of times
+		33 imples 0 1.0 of times
+		16 imples 0 1.0 of times
+		18 imples 0 1.0 of times
+		17 imples 0 1.0 of times
+		22 imples 0 1.0 of times
+		30 imples 0 1.0 of times
+		24 imples 0 1.0 of times
+		27 imples 0 1.0 of times
+		26 imples 0 1.0 of times
+		37 imples 0 1.0 of times
+		29 imples 0 1.0 of times
+		31 imples 0 1.0 of times
+		38 imples 0 1.0 of times
+	 Feature score_factor:
+		0 imples 0 0.9929845074539608 of times
+		0 imples 1 0.0070154925460391695 of times
+		1 imples 0 0.9974554707379135 of times
+		1 imples 1 0.002544529262086514 of times
+	 Feature Age_Above_FourtyFive:
+		1 imples 0 0.991492652745553 of times
+		1 imples 1 0.008507347254447023 of times
+		0 imples 0 0.9959007993441279 of times
+		0 imples 1 0.004099200655872105 of times
+	 Feature Age_Below_TwentyFive:
+		0 imples 0 0.9948186528497409 of times
+		0 imples 1 0.0051813471502590676 of times
+		1 imples 0 0.9955456570155902 of times
+		1 imples 1 0.004454342984409799 of times
+	 Feature Misdemeanor:
+		0 imples 0 0.9952141057934509 of times
+		0 imples 1 0.004785894206549119 of times
+		1 imples 0 0.9945504087193461 of times
+		1 imples 1 0.005449591280653951 of times
+Searching proxies for feature Hispanic
+	 Feature Number_of_Priors:
+		0 imples 0 0.8949640287769784 of times
+		0 imples 1 0.10503597122302158 of times
+		4 imples 0 0.9621451104100947 of times
+		4 imples 1 0.03785488958990536 of times
+		14 imples 0 0.9565217391304348 of times
+		14 imples 1 0.043478260869565216 of times
+		3 imples 0 0.9356223175965666 of times
+		3 imples 1 0.06437768240343347 of times
+		1 imples 0 0.8972542072630647 of times
+		1 imples 1 0.10274579273693533 of times
+		7 imples 0 0.9421965317919075 of times
+		7 imples 1 0.057803468208092484 of times
+		6 imples 0 0.9487179487179487 of times
+		6 imples 1 0.05128205128205128 of times
+		5 imples 0 0.9523809523809523 of times
+		5 imples 1 0.047619047619047616 of times
+		13 imples 0 0.9682539682539683 of times
+		13 imples 1 0.031746031746031744 of times
+		8 imples 0 0.9375 of times
+		8 imples 1 0.0625 of times
+		9 imples 0 0.9448818897637795 of times
+		9 imples 1 0.05511811023622047 of times
+		21 imples 0 1.0 of times
+		2 imples 0 0.9133627019089574 of times
+		2 imples 1 0.08663729809104258 of times
+		15 imples 0 1.0 of times
+		10 imples 0 0.9555555555555556 of times
+		10 imples 1 0.044444444444444446 of times
+		28 imples 0 1.0 of times
+		19 imples 0 0.9166666666666666 of times
+		19 imples 1 0.08333333333333333 of times
+		11 imples 0 0.9605263157894737 of times
+		11 imples 1 0.039473684210526314 of times
+		23 imples 0 1.0 of times
+		25 imples 0 1.0 of times
+		36 imples 0 1.0 of times
+		12 imples 0 0.9811320754716981 of times
+		12 imples 1 0.018867924528301886 of times
+		20 imples 1 0.19047619047619047 of times
+		20 imples 0 0.8095238095238095 of times
+		33 imples 0 1.0 of times
+		16 imples 0 0.9354838709677419 of times
+		16 imples 1 0.06451612903225806 of times
+		18 imples 0 0.9444444444444444 of times
+		18 imples 1 0.05555555555555555 of times
+		17 imples 0 0.9285714285714286 of times
+		17 imples 1 0.07142857142857142 of times
+		22 imples 0 1.0 of times
+		30 imples 0 1.0 of times
+		24 imples 0 1.0 of times
+		27 imples 0 1.0 of times
+		26 imples 0 0.75 of times
+		26 imples 1 0.25 of times
+		37 imples 0 1.0 of times
+		29 imples 0 1.0 of times
+		31 imples 0 1.0 of times
+		38 imples 0 1.0 of times
+	 Feature score_factor:
+		0 imples 0 0.892429114294066 of times
+		0 imples 1 0.10757088570593394 of times
+		1 imples 0 0.9487459105779716 of times
+		1 imples 1 0.05125408942202835 of times
+	 Feature Age_Above_FourtyFive:
+		1 imples 0 0.9156999226604795 of times
+		1 imples 1 0.0843000773395205 of times
+		0 imples 0 0.9180159868825579 of times
+		0 imples 1 0.08198401311744209 of times
+	 Feature Age_Below_TwentyFive:
+		0 imples 0 0.917098445595855 of times
+		0 imples 1 0.08290155440414508 of times
+		1 imples 0 0.9190794357832219 of times
+		1 imples 1 0.08092056421677803 of times
+	 Feature Misdemeanor:
+		0 imples 0 0.9267002518891687 of times
+		0 imples 1 0.07329974811083123 of times
+		1 imples 0 0.9009990917347865 of times
+		1 imples 1 0.09900090826521345 of times
+Searching proxies for feature Native_American
+	 Feature Number_of_Priors:
+		0 imples 0 0.9985611510791367 of times
+		0 imples 1 0.0014388489208633094 of times
+		4 imples 0 1.0 of times
+		14 imples 0 1.0 of times
+		3 imples 0 0.9978540772532188 of times
+		3 imples 1 0.002145922746781116 of times
+		1 imples 0 0.9991142604074402 of times
+		1 imples 1 0.0008857395925597874 of times
+		7 imples 0 0.9942196531791907 of times
+		7 imples 1 0.005780346820809248 of times
+		6 imples 0 1.0 of times
+		5 imples 0 0.9963369963369964 of times
+		5 imples 1 0.003663003663003663 of times
+		13 imples 0 1.0 of times
+		8 imples 0 1.0 of times
+		9 imples 0 1.0 of times
+		21 imples 0 1.0 of times
+		2 imples 0 0.9970631424375918 of times
+		2 imples 1 0.002936857562408223 of times
+		15 imples 0 0.9761904761904762 of times
+		15 imples 1 0.023809523809523808 of times
+		10 imples 0 1.0 of times
+		28 imples 0 1.0 of times
+		19 imples 0 1.0 of times
+		11 imples 0 1.0 of times
+		23 imples 0 1.0 of times
+		25 imples 0 1.0 of times
+		36 imples 0 1.0 of times
+		12 imples 0 1.0 of times
+		20 imples 0 1.0 of times
+		33 imples 0 1.0 of times
+		16 imples 0 1.0 of times
+		18 imples 0 1.0 of times
+		17 imples 0 1.0 of times
+		22 imples 0 0.9375 of times
+		22 imples 1 0.0625 of times
+		30 imples 0 1.0 of times
+		24 imples 0 1.0 of times
+		27 imples 0 1.0 of times
+		26 imples 0 1.0 of times
+		37 imples 0 1.0 of times
+		29 imples 0 1.0 of times
+		31 imples 0 1.0 of times
+		38 imples 0 1.0 of times
+	 Feature score_factor:
+		0 imples 0 0.9991230634317451 of times
+		0 imples 1 0.0008769365682548962 of times
+		1 imples 0 0.9970919665576155 of times
+		1 imples 1 0.0029080334423845873 of times
+	 Feature Age_Above_FourtyFive:
+		1 imples 0 0.9984532095901005 of times
+		1 imples 1 0.0015467904098994587 of times
+		0 imples 0 0.9981553597048576 of times
+		0 imples 1 0.0018446402951424472 of times
+	 Feature Age_Below_TwentyFive:
+		0 imples 0 0.9981347150259068 of times
+		0 imples 1 0.0018652849740932642 of times
+		1 imples 0 0.9985152190051967 of times
+		1 imples 1 0.0014847809948032665 of times
+	 Feature Misdemeanor:
+		0 imples 0 0.9982367758186398 of times
+		0 imples 1 0.0017632241813602015 of times
+		1 imples 0 0.9981834695731153 of times
+		1 imples 1 0.0018165304268846503 of times
+Searching proxies for feature Other
+	 Feature Number_of_Priors:
+		0 imples 1 0.08585131894484413 of times
+		0 imples 0 0.9141486810551559 of times
+		4 imples 0 0.943217665615142 of times
+		4 imples 1 0.056782334384858045 of times
+		14 imples 0 1.0 of times
+		3 imples 1 0.03648068669527897 of times
+		3 imples 0 0.9635193133047211 of times
+		1 imples 0 0.9521700620017715 of times
+		1 imples 1 0.047829937998228524 of times
+		7 imples 0 0.9710982658959537 of times
+		7 imples 1 0.028901734104046242 of times
+		6 imples 0 0.9487179487179487 of times
+		6 imples 1 0.05128205128205128 of times
+		5 imples 0 0.9523809523809523 of times
+		5 imples 1 0.047619047619047616 of times
+		13 imples 0 0.9682539682539683 of times
+		13 imples 1 0.031746031746031744 of times
+		8 imples 0 0.9652777777777778 of times
+		8 imples 1 0.034722222222222224 of times
+		9 imples 0 0.9921259842519685 of times
+		9 imples 1 0.007874015748031496 of times
+		21 imples 0 1.0 of times
+		2 imples 0 0.9515418502202643 of times
+		2 imples 1 0.048458149779735685 of times
+		15 imples 0 1.0 of times
+		10 imples 0 1.0 of times
+		28 imples 0 1.0 of times
+		19 imples 0 1.0 of times
+		11 imples 0 0.9868421052631579 of times
+		11 imples 1 0.013157894736842105 of times
+		23 imples 0 0.9230769230769231 of times
+		23 imples 1 0.07692307692307693 of times
+		25 imples 0 1.0 of times
+		36 imples 0 1.0 of times
+		12 imples 0 0.9811320754716981 of times
+		12 imples 1 0.018867924528301886 of times
+		20 imples 0 0.9523809523809523 of times
+		20 imples 1 0.047619047619047616 of times
+		33 imples 0 1.0 of times
+		16 imples 0 1.0 of times
+		18 imples 0 1.0 of times
+		17 imples 0 1.0 of times
+		22 imples 0 1.0 of times
+		30 imples 0 1.0 of times
+		24 imples 0 0.9 of times
+		24 imples 1 0.1 of times
+		27 imples 0 1.0 of times
+		26 imples 0 1.0 of times
+		37 imples 0 1.0 of times
+		29 imples 0 1.0 of times
+		31 imples 1 0.5 of times
+		31 imples 0 0.5 of times
+		38 imples 0 1.0 of times
+	 Feature score_factor:
+		0 imples 1 0.07980122771119556 of times
+		0 imples 0 0.9201987722888044 of times
+		1 imples 0 0.9745547073791349 of times
+		1 imples 1 0.02544529262086514 of times
+	 Feature Age_Above_FourtyFive:
+		1 imples 1 0.058004640371229696 of times
+		1 imples 0 0.9419953596287703 of times
+		0 imples 0 0.9450707112113138 of times
+		0 imples 1 0.054929288788686206 of times
+	 Feature Age_Below_TwentyFive:
+		0 imples 1 0.05575129533678756 of times
+		0 imples 0 0.9442487046632124 of times
+		1 imples 0 0.9450631031922792 of times
+		1 imples 1 0.05493689680772086 of times
+	 Feature Misdemeanor:
+		0 imples 1 0.05365239294710328 of times
+		0 imples 0 0.9463476070528968 of times
+		1 imples 1 0.05903723887375113 of times
+		1 imples 0 0.9409627611262489 of times
+Searching proxies for feature Female
+	 Feature Number_of_Priors:
+		0 imples 0 0.747242206235012 of times
+		0 imples 1 0.252757793764988 of times
+		4 imples 0 0.8264984227129337 of times
+		4 imples 1 0.17350157728706625 of times
+		14 imples 0 0.8478260869565217 of times
+		14 imples 1 0.15217391304347827 of times
+		3 imples 0 0.8347639484978541 of times
+		3 imples 1 0.16523605150214593 of times
+		1 imples 1 0.19574844995571303 of times
+		1 imples 0 0.804251550044287 of times
+		7 imples 0 0.8323699421965318 of times
+		7 imples 1 0.1676300578034682 of times
+		6 imples 0 0.8666666666666667 of times
+		6 imples 1 0.13333333333333333 of times
+		5 imples 0 0.8534798534798534 of times
+		5 imples 1 0.14652014652014653 of times
+		13 imples 0 0.9365079365079365 of times
+		13 imples 1 0.06349206349206349 of times
+		8 imples 0 0.9236111111111112 of times
+		8 imples 1 0.0763888888888889 of times
+		9 imples 0 0.889763779527559 of times
+		9 imples 1 0.11023622047244094 of times
+		21 imples 0 0.9444444444444444 of times
+		21 imples 1 0.05555555555555555 of times
+		2 imples 1 0.18061674008810572 of times
+		2 imples 0 0.8193832599118943 of times
+		15 imples 0 0.8571428571428571 of times
+		15 imples 1 0.14285714285714285 of times
+		10 imples 0 0.8777777777777778 of times
+		10 imples 1 0.12222222222222222 of times
+		28 imples 0 0.8 of times
+		28 imples 1 0.2 of times
+		19 imples 0 0.9583333333333334 of times
+		19 imples 1 0.041666666666666664 of times
+		11 imples 0 0.881578947368421 of times
+		11 imples 1 0.11842105263157894 of times
+		23 imples 0 0.8461538461538461 of times
+		23 imples 1 0.15384615384615385 of times
+		25 imples 0 0.875 of times
+		25 imples 1 0.125 of times
+		36 imples 0 1.0 of times
+		12 imples 0 0.9622641509433962 of times
+		12 imples 1 0.03773584905660377 of times
+		20 imples 0 0.9047619047619048 of times
+		20 imples 1 0.09523809523809523 of times
+		33 imples 0 1.0 of times
+		16 imples 0 0.967741935483871 of times
+		16 imples 1 0.03225806451612903 of times
+		18 imples 0 1.0 of times
+		17 imples 0 0.9642857142857143 of times
+		17 imples 1 0.03571428571428571 of times
+		22 imples 0 0.875 of times
+		22 imples 1 0.125 of times
+		30 imples 1 1.0 of times
+		24 imples 0 1.0 of times
+		27 imples 0 1.0 of times
+		26 imples 0 1.0 of times
+		37 imples 0 1.0 of times
+		29 imples 0 1.0 of times
+		31 imples 0 1.0 of times
+		38 imples 0 1.0 of times
+	 Feature score_factor:
+		0 imples 0 0.7956737795966092 of times
+		0 imples 1 0.20432622040339082 of times
+		1 imples 0 0.8269720101781171 of times
+		1 imples 1 0.17302798982188294 of times
+	 Feature Age_Above_FourtyFive:
+		1 imples 0 0.814385150812065 of times
+		1 imples 1 0.18561484918793503 of times
+		0 imples 0 0.8083623693379791 of times
+		0 imples 1 0.1916376306620209 of times
+	 Feature Age_Below_TwentyFive:
+		0 imples 0 0.807461139896373 of times
+		0 imples 1 0.19253886010362695 of times
+		1 imples 0 0.8173719376391982 of times
+		1 imples 1 0.18262806236080179 of times
+	 Feature Misdemeanor:
+		0 imples 0 0.8277078085642318 of times
+		0 imples 1 0.17229219143576827 of times
+		1 imples 0 0.7770208900999092 of times
+		1 imples 1 0.22297910990009082 of times

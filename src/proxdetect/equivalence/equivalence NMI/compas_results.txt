@@ -1,0 +1,15 @@
+Non-Protected Features: 
+	Number_of_Priors
+	score_factor
+	Age_Above_FourtyFive
+	Age_Below_TwentyFive
+	Misdemeanor
+Protected Features: 
+	African_American
+	Asian
+	Hispanic
+	Native_American
+	Other
+	Female
+==================== Searching for Categorical Equivalence ==================
+

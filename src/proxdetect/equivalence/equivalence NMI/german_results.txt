@@ -1,0 +1,25 @@
+Non-Protected Features: 
+	checking_status
+	duration
+	credit_history
+	purpose
+	credit_amount
+	savings_status
+	employment
+	installment_commitment
+	personal_status
+	other_parties
+	residence
+	property_magnitude
+	other_payment_plans
+	housing
+	existing_credits
+	job
+	num_dependents
+	own_telephone
+Protected Features: 
+	age
+	age_cat
+	foreign_worker
+==================== Searching for Categorical Equivalence ==================
+
