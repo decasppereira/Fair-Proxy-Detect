@@ -24,8 +24,6 @@ class DataInfo(object):
         Class for representing a dataset, its protected and non-protected features, and possible proxies
     """
     def __init__(self, commands):
-        #self.data = self.pickle_load_file(commands[1])
-        #print(self.data)
         self.data = pd.read_csv(commands[1])
         self.num_features = int(commands[2])
         self.num_protected_features = int(commands[3])

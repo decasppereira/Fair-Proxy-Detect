@@ -18,24 +18,24 @@ import matplotlib.pyplot as plt
 from DataInfo import DataInfo, ProxyType
 
 #==============================================================================
-def input_check():
+def inputCheck():
     #dataset total-features num-protected protected_1 ... protected_n
     if not path.exists(sys.argv[1]):
         print(sys.argv[1])
-        show_info()
+        showInfo()
         exit()
     
     #TODO: check #total-features , check #num_protected<#total, check all protected_n exist
 
 
 #==============================================================================
-def show_info():
+def showInfo():
     #dataset total-features num-protected protected_1 ... protected_n
     print("How to run: ")
     print("\t dataset_path(.pkl) total-feature-number protected-features-number protected_feature_1 ... protected_feature_n")
 
 #==============================================================================
-def detect_absolute_imp(data_info, proc_num):
+def detectAbsoluteImp(data_info, proc_num):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
     print('Searching proxies for feature '+feature_labels[proc_num])
@@ -61,7 +61,7 @@ def detect_absolute_imp(data_info, proc_num):
         if( eq ):
             print('\t \t implies ' + feature_labels[proc_num])
         
-def detect_margin_imp(data_info, proc_num, direction):
+def detectMarginImp(data_info, proc_num, direction):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
    
@@ -131,18 +131,26 @@ def detect_margin_imp(data_info, proc_num, direction):
 
             print("\t\t\t {} implies {} {} of times".format(feature_labels[proc_num], feature_labels[j] , margin))
 
-
+def visualizeAttributeImp(data, np_num, p_num):
+    
         
 #==============================================================================
 if __name__ == '__main__':
-    input_check()
-    data_info = DataInfo(sys.argv)
-
+    inputCheck()
     print("==================== Searching for Categorical Implication ==================")
     print()
+
+    # To test both directions an output detailed .txt files #
+    data_info = DataInfo(sys.argv)
     for p_feature in data_info.protected_features:
-        detect_margin_imp(data_info, p_feature, "right")
-        detect_margin_imp(data_info, p_feature, "left")
+        detectMarginImp(data_info, p_feature, "right")
+        detectMarginImp(data_info, p_feature, "left")
+
+    # To generate visualizations between two attributes #
+    data = pd.read_csv(sys.argv[1])
+    np_num = int(sys.argv[2])
+    p_num = int(sys.argv[3])
+    visualizeAttributeImp(data, np_num, p_num)
 
     #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
     #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
