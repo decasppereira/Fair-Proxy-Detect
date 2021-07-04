@@ -35,7 +35,7 @@ def show_info():
     print("\t dataset_path(.pkl) total-feature-number protected-features-number protected_feature_1 ... protected_feature_n")
 
 #==============================================================================
-def detect_cat_imp(data_info, proc_num):
+def detect_absolute_imp(data_info, proc_num):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
     print('Searching proxies for feature '+feature_labels[proc_num])
@@ -61,41 +61,76 @@ def detect_cat_imp(data_info, proc_num):
         if( eq ):
             print('\t \t implies ' + feature_labels[proc_num])
         
-def detect_margin_imp(data_info, proc_num):
+def detect_margin_imp(data_info, proc_num, direction):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
    
     print('Searching proxies for feature '+feature_labels[proc_num])
     
-    for j in data_info.non_protected_features:
-        print('\t Feature '+feature_labels[j]+ ':')
+    if(direction == "right"):
+        for j in data_info.non_protected_features:
+            print('\t Feature '+feature_labels[j]+ ':')
 
-        cat_relations = dict() # In the form {nproc value: [nproc value count, {proc value1: proc value1 count, proc value2, proc value2 count, ...}]}
-        i = 0
-        np_feat = data_info.data[feature_labels[j]] #list with all values of non protected feature #j
-        for v in np_feat:
-            if v in cat_relations:
-                cat_relations[v][0] +=1 
-                if proc_feat[i] in  cat_relations[v][1]:
-                    cat_relations[v][1][proc_feat[i]] += 1
-                else:
-                    cat_relations[v][1][proc_feat[i]] = 1
-            else: 
-                cat_relations[v] = [1, {proc_feat[i]: 1}]
-            
-            i = i+1
+            cat_relations = dict() # In the form {nproc value: [nproc value count, {proc value1: proc value1 count, proc value2, proc value2 count, ...}]}
+            i = 0
+            np_feat = data_info.data[feature_labels[j]] #list with all values of non protected feature #j
+            for v in np_feat:
+                if v in cat_relations:
+                    cat_relations[v][0] +=1 
+                    if proc_feat[i] in  cat_relations[v][1]:
+                        cat_relations[v][1][proc_feat[i]] += 1
+                    else:
+                        cat_relations[v][1][proc_feat[i]] = 1
+                else: 
+                    cat_relations[v] = [1, {proc_feat[i]: 1}]
+                
+                i = i+1
 
-        margin = 0
-        for v in cat_relations:
-            abs_occurence = cat_relations[v][0]
-            max_key = max(cat_relations[v][1], key = cat_relations[v][1].get)
-            margin += (cat_relations[v][1][max_key]/abs_occurence)*(abs_occurence/len(data_info.data))
-            #for proc_v in cat_relations[v][1]:
-            print("\t\t{} implies {} {} of times".format(v, max_key, round(cat_relations[v][1][max_key]/abs_occurence, 3) ))
+            margin = 0
+            for v in cat_relations:
+                abs_occurence = cat_relations[v][0]
+                max_key = max(cat_relations[v][1], key = cat_relations[v][1].get)
+                margin += (cat_relations[v][1][max_key]/abs_occurence)*(abs_occurence/len(data_info.data))
+                for proc_v in cat_relations[v][1]:
+                    print("\t\t{} implies {} {} of times".format(v, proc_v, round(cat_relations[v][1][proc_v]/abs_occurence, 3) ))
 
-        print("\t\t\t {} implies {} {} of times".format(feature_labels[j], feature_labels[proc_num], margin))
+                #print("\t\t{} implies {} {} of times".format(v, max_key, round(cat_relations[v][1][max_key]/abs_occurence, 3) ))
 
-        data_info.feature_margins[feature_labels[proc_num]][feature_labels[j]] = margin
+            print("\t\t\t {} implies {} {} of times".format(feature_labels[j], feature_labels[proc_num], margin))
+
+            #data_info.feature_margins[feature_labels[proc_num]][feature_labels[j]] = margin
+
+    elif(direction == "left"):
+        for j in data_info.non_protected_features:
+            print('\t Feature '+feature_labels[j]+ ':')
+
+            cat_relations = dict() # In the form {proc value: [proc value count, {nproc value1: nproc value1 count, nproc value2, nproc value2 count, ...}]}
+            i = 0
+            np_feat = data_info.data[feature_labels[j]] #list with all values of non protected feature #j
+            for v in proc_feat:
+                if v in cat_relations:
+                    cat_relations[v][0] +=1 
+                    if np_feat[i] in  cat_relations[v][1]:
+                        cat_relations[v][1][np_feat[i]] += 1
+                    else:
+                        cat_relations[v][1][np_feat[i]] = 1
+                else: 
+                    cat_relations[v] = [1, {np_feat[i]: 1}]
+                
+                i = i+1
+
+            margin = 0
+            for v in cat_relations:
+                abs_occurence = cat_relations[v][0]
+                max_key = max(cat_relations[v][1], key = cat_relations[v][1].get)
+                margin += (cat_relations[v][1][max_key]/abs_occurence)*(abs_occurence/len(data_info.data))
+                for np_v in cat_relations[v][1]:
+                    print("\t\t{} implies {} {} of times".format(v, np_v, round(cat_relations[v][1][np_v]/abs_occurence, 3) ))
+
+                #print("\t\t{} implies {} {} of times".format(v, max_key, round(cat_relations[v][1][max_key]/abs_occurence, 3) ))
+
+            print("\t\t\t {} implies {} {} of times".format(feature_labels[proc_num], feature_labels[j] , margin))
+
 
         
 #==============================================================================
@@ -106,9 +141,10 @@ if __name__ == '__main__':
     print("==================== Searching for Categorical Implication ==================")
     print()
     for p_feature in data_info.protected_features:
-        detect_margin_imp(data_info, p_feature)
+        detect_margin_imp(data_info, p_feature, "right")
+        detect_margin_imp(data_info, p_feature, "left")
 
-    feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
-    ax = sns.heatmap(feat_margins, annot=True, fmt="f")
-    plt.show()
+    #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
+    #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
+    #plt.show()
 

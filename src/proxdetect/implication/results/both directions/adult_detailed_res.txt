@@ -1,0 +1,1246 @@
+Non-Protected Features: 
+	Workclass
+	Education
+	Marital Status
+	Occupation
+	Relationship
+	Capital Gain
+	Capital Loss
+	Hours per week
+	Country
+Protected Features: 
+	Age
+	Race
+	Sex
+==================== Searching for Categorical Implication ==================
+
+Searching proxies for feature Age
+	 Feature Workclass:
+		Self-emp-not-inc implies Age > 48.00 0.405 of times
+		Self-emp-not-inc implies 28.00 < Age <= 37.00 0.203 of times
+		Self-emp-not-inc implies 37.00 < Age <= 48.00 0.315 of times
+		Self-emp-not-inc implies Age <= 28.00 0.077 of times
+		State-gov implies 37.00 < Age <= 48.00 0.361 of times
+		State-gov implies Age > 48.00 0.253 of times
+		State-gov implies Age <= 28.00 0.17 of times
+		State-gov implies 28.00 < Age <= 37.00 0.216 of times
+		Private implies Age > 48.00 0.217 of times
+		Private implies 28.00 < Age <= 37.00 0.26 of times
+		Private implies 37.00 < Age <= 48.00 0.295 of times
+		Private implies Age <= 28.00 0.227 of times
+		Local-gov implies 37.00 < Age <= 48.00 0.4 of times
+		Local-gov implies Age > 48.00 0.312 of times
+		Local-gov implies 28.00 < Age <= 37.00 0.189 of times
+		Local-gov implies Age <= 28.00 0.099 of times
+		? implies Age > 48.00 0.444 of times
+		? implies Age <= 28.00 0.357 of times
+		? implies 37.00 < Age <= 48.00 0.089 of times
+		? implies 28.00 < Age <= 37.00 0.11 of times
+		Federal-gov implies Age <= 28.00 0.06 of times
+		Federal-gov implies Age > 48.00 0.34 of times
+		Federal-gov implies 37.00 < Age <= 48.00 0.412 of times
+		Federal-gov implies 28.00 < Age <= 37.00 0.187 of times
+		Self-emp-inc implies 37.00 < Age <= 48.00 0.366 of times
+		Self-emp-inc implies Age > 48.00 0.42 of times
+		Self-emp-inc implies 28.00 < Age <= 37.00 0.172 of times
+		Self-emp-inc implies Age <= 28.00 0.042 of times
+		Without-pay implies Age <= 28.00 0.5 of times
+		Without-pay implies Age > 48.00 0.5 of times
+		Never-worked implies Age <= 28.00 1.0 of times
+			 Workclass implies Age 0.3321051512789627 of times
+	 Feature Education:
+		High School grad implies Age > 48.00 0.259 of times
+		High School grad implies 28.00 < Age <= 37.00 0.235 of times
+		High School grad implies 37.00 < Age <= 48.00 0.276 of times
+		High School grad implies Age <= 28.00 0.231 of times
+		Doctorate implies 37.00 < Age <= 48.00 0.395 of times
+		Doctorate implies Age > 48.00 0.446 of times
+		Doctorate implies 28.00 < Age <= 37.00 0.155 of times
+		Doctorate implies Age <= 28.00 0.003 of times
+		Dropout implies 28.00 < Age <= 37.00 0.153 of times
+		Dropout implies Age > 48.00 0.355 of times
+		Dropout implies 37.00 < Age <= 48.00 0.157 of times
+		Dropout implies Age <= 28.00 0.335 of times
+		Bachelors implies 37.00 < Age <= 48.00 0.362 of times
+		Bachelors implies 28.00 < Age <= 37.00 0.268 of times
+		Bachelors implies Age <= 28.00 0.151 of times
+		Bachelors implies Age > 48.00 0.219 of times
+		Masters implies Age > 48.00 0.339 of times
+		Masters implies 37.00 < Age <= 48.00 0.412 of times
+		Masters implies Age <= 28.00 0.039 of times
+		Masters implies 28.00 < Age <= 37.00 0.21 of times
+		Associates implies 28.00 < Age <= 37.00 0.306 of times
+		Associates implies 37.00 < Age <= 48.00 0.332 of times
+		Associates implies Age > 48.00 0.192 of times
+		Associates implies Age <= 28.00 0.17 of times
+		Prof-School implies Age > 48.00 0.301 of times
+		Prof-School implies 37.00 < Age <= 48.00 0.49 of times
+		Prof-School implies Age <= 28.00 0.017 of times
+		Prof-School implies 28.00 < Age <= 37.00 0.192 of times
+			 Education implies Age 0.3257280521504995 of times
+	 Feature Marital Status:
+		Married implies Age > 48.00 0.322 of times
+		Married implies 28.00 < Age <= 37.00 0.247 of times
+		Married implies 37.00 < Age <= 48.00 0.361 of times
+		Married implies Age <= 28.00 0.07 of times
+		Never-Married implies 37.00 < Age <= 48.00 0.128 of times
+		Never-Married implies Age <= 28.00 0.593 of times
+		Never-Married implies 28.00 < Age <= 37.00 0.223 of times
+		Never-Married implies Age > 48.00 0.056 of times
+		Separated implies Age > 48.00 0.293 of times
+		Separated implies 28.00 < Age <= 37.00 0.233 of times
+		Separated implies 37.00 < Age <= 48.00 0.4 of times
+		Separated implies Age <= 28.00 0.074 of times
+		Widowed implies Age > 48.00 0.813 of times
+		Widowed implies 37.00 < Age <= 48.00 0.124 of times
+		Widowed implies 28.00 < Age <= 37.00 0.052 of times
+		Widowed implies Age <= 28.00 0.012 of times
+			 Marital Status implies Age 0.4330758874796287 of times
+	 Feature Occupation:
+		Sales implies Age > 48.00 0.278 of times
+		Sales implies 28.00 < Age <= 37.00 0.236 of times
+		Sales implies 37.00 < Age <= 48.00 0.274 of times
+		Sales implies Age <= 28.00 0.213 of times
+		White-Collar implies 37.00 < Age <= 48.00 0.373 of times
+		White-Collar implies Age > 48.00 0.302 of times
+		White-Collar implies 28.00 < Age <= 37.00 0.238 of times
+		White-Collar implies Age <= 28.00 0.087 of times
+		Blue-Collar implies 28.00 < Age <= 37.00 0.252 of times
+		Blue-Collar implies Age <= 28.00 0.203 of times
+		Blue-Collar implies Age > 48.00 0.251 of times
+		Blue-Collar implies 37.00 < Age <= 48.00 0.294 of times
+		Other implies 37.00 < Age <= 48.00 0.32 of times
+		Other implies 28.00 < Age <= 37.00 0.281 of times
+		Other implies Age > 48.00 0.232 of times
+		Other implies Age <= 28.00 0.167 of times
+		? implies Age > 48.00 0.443 of times
+		? implies Age <= 28.00 0.359 of times
+		? implies 37.00 < Age <= 48.00 0.089 of times
+		? implies 28.00 < Age <= 37.00 0.11 of times
+		Professional implies 28.00 < Age <= 37.00 0.233 of times
+		Professional implies Age > 48.00 0.274 of times
+		Professional implies 37.00 < Age <= 48.00 0.385 of times
+		Professional implies Age <= 28.00 0.108 of times
+		Service implies Age <= 28.00 0.393 of times
+		Service implies Age > 48.00 0.199 of times
+		Service implies 28.00 < Age <= 37.00 0.229 of times
+		Service implies 37.00 < Age <= 48.00 0.179 of times
+		Admin implies Age <= 28.00 0.258 of times
+		Admin implies Age > 48.00 0.209 of times
+		Admin implies 37.00 < Age <= 48.00 0.313 of times
+		Admin implies 28.00 < Age <= 37.00 0.22 of times
+		Military implies 37.00 < Age <= 48.00 1.0 of times
+			 Occupation implies Age 0.3389073903493233 of times
+	 Feature Relationship:
+		Husband implies Age > 48.00 0.34 of times
+		Husband implies 28.00 < Age <= 37.00 0.238 of times
+		Husband implies 37.00 < Age <= 48.00 0.363 of times
+		Husband implies Age <= 28.00 0.06 of times
+		Not-in-family implies 37.00 < Age <= 48.00 0.252 of times
+		Not-in-family implies 28.00 < Age <= 37.00 0.249 of times
+		Not-in-family implies Age > 48.00 0.242 of times
+		Not-in-family implies Age <= 28.00 0.256 of times
+		Unmarried implies Age > 48.00 0.256 of times
+		Unmarried implies 37.00 < Age <= 48.00 0.363 of times
+		Unmarried implies 28.00 < Age <= 37.00 0.259 of times
+		Unmarried implies Age <= 28.00 0.121 of times
+		Wife implies 37.00 < Age <= 48.00 0.365 of times
+		Wife implies Age <= 28.00 0.12 of times
+		Wife implies Age > 48.00 0.209 of times
+		Wife implies 28.00 < Age <= 37.00 0.306 of times
+		Own-child implies Age <= 28.00 0.772 of times
+		Own-child implies 37.00 < Age <= 48.00 0.072 of times
+		Own-child implies Age > 48.00 0.022 of times
+		Own-child implies 28.00 < Age <= 37.00 0.134 of times
+		Other-relative implies Age <= 28.00 0.51 of times
+		Other-relative implies 37.00 < Age <= 48.00 0.162 of times
+		Other-relative implies Age > 48.00 0.146 of times
+		Other-relative implies 28.00 < Age <= 37.00 0.182 of times
+			 Relationship implies Age 0.38708991709771134 of times
+	 Feature Capital Gain:
+		High implies Age > 48.00 0.378 of times
+		High implies 37.00 < Age <= 48.00 0.362 of times
+		High implies 28.00 < Age <= 37.00 0.21 of times
+		High implies Age <= 28.00 0.05 of times
+		None implies 37.00 < Age <= 48.00 0.301 of times
+		None implies Age > 48.00 0.253 of times
+		None implies 28.00 < Age <= 37.00 0.234 of times
+		None implies Age <= 28.00 0.212 of times
+		Low implies 28.00 < Age <= 37.00 0.27 of times
+		Low implies Age > 48.00 0.327 of times
+		Low implies 37.00 < Age <= 48.00 0.3 of times
+		Low implies Age <= 28.00 0.104 of times
+			 Capital Gain implies Age 0.30801388790476864 of times
+	 Feature Capital Loss:
+		None implies Age > 48.00 0.263 of times
+		None implies 37.00 < Age <= 48.00 0.301 of times
+		None implies 28.00 < Age <= 37.00 0.235 of times
+		None implies Age <= 28.00 0.201 of times
+		High implies Age > 48.00 0.359 of times
+		High implies 37.00 < Age <= 48.00 0.407 of times
+		High implies 28.00 < Age <= 37.00 0.177 of times
+		High implies Age <= 28.00 0.057 of times
+		Low implies 37.00 < Age <= 48.00 0.311 of times
+		Low implies 28.00 < Age <= 37.00 0.297 of times
+		Low implies Age > 48.00 0.239 of times
+		Low implies Age <= 28.00 0.153 of times
+			 Capital Loss implies Age 0.30539219159640046 of times
+	 Feature Hours per week:
+		40.00 < Hours per week <= 45.00 implies Age > 48.00 0.219 of times
+		40.00 < Hours per week <= 45.00 implies 28.00 < Age <= 37.00 0.274 of times
+		40.00 < Hours per week <= 45.00 implies Age <= 28.00 0.128 of times
+		40.00 < Hours per week <= 45.00 implies 37.00 < Age <= 48.00 0.38 of times
+		Hours per week <= 40.00 implies 37.00 < Age <= 48.00 0.273 of times
+		Hours per week <= 40.00 implies Age > 48.00 0.269 of times
+		Hours per week <= 40.00 implies 28.00 < Age <= 37.00 0.213 of times
+		Hours per week <= 40.00 implies Age <= 28.00 0.245 of times
+		Hours per week > 45.00 implies 28.00 < Age <= 37.00 0.273 of times
+		Hours per week > 45.00 implies Age <= 28.00 0.092 of times
+		Hours per week > 45.00 implies Age > 48.00 0.275 of times
+		Hours per week > 45.00 implies 37.00 < Age <= 48.00 0.36 of times
+			 Hours per week implies Age 0.30539219159640046 of times
+	 Feature Country:
+		United-States implies Age > 48.00 0.269 of times
+		United-States implies 28.00 < Age <= 37.00 0.231 of times
+		United-States implies 37.00 < Age <= 48.00 0.308 of times
+		United-States implies Age <= 28.00 0.192 of times
+		Euro_1 implies 37.00 < Age <= 48.00 0.208 of times
+		Euro_1 implies Age <= 28.00 0.168 of times
+		Euro_1 implies Age > 48.00 0.384 of times
+		Euro_1 implies 28.00 < Age <= 37.00 0.24 of times
+		Latin-America implies 28.00 < Age <= 37.00 0.289 of times
+		Latin-America implies Age <= 28.00 0.378 of times
+		Latin-America implies Age > 48.00 0.131 of times
+		Latin-America implies 37.00 < Age <= 48.00 0.203 of times
+		Other implies 28.00 < Age <= 37.00 0.326 of times
+		Other implies Age > 48.00 0.274 of times
+		Other implies 37.00 < Age <= 48.00 0.337 of times
+		Other implies Age <= 28.00 0.063 of times
+		SE-Asia implies 28.00 < Age <= 37.00 0.295 of times
+		SE-Asia implies Age > 48.00 0.192 of times
+		SE-Asia implies Age <= 28.00 0.199 of times
+		SE-Asia implies 37.00 < Age <= 48.00 0.315 of times
+		South-America implies 28.00 < Age <= 37.00 0.308 of times
+		South-America implies 37.00 < Age <= 48.00 0.205 of times
+		South-America implies Age <= 28.00 0.308 of times
+		South-America implies Age > 48.00 0.179 of times
+		? implies Age > 48.00 0.244 of times
+		? implies 28.00 < Age <= 37.00 0.244 of times
+		? implies 37.00 < Age <= 48.00 0.358 of times
+		? implies Age <= 28.00 0.154 of times
+		British-Commonwealth implies Age > 48.00 0.331 of times
+		British-Commonwealth implies 37.00 < Age <= 48.00 0.331 of times
+		British-Commonwealth implies 28.00 < Age <= 37.00 0.247 of times
+		British-Commonwealth implies Age <= 28.00 0.091 of times
+		Euro_2 implies Age <= 28.00 0.165 of times
+		Euro_2 implies Age > 48.00 0.451 of times
+		Euro_2 implies 37.00 < Age <= 48.00 0.264 of times
+		Euro_2 implies 28.00 < Age <= 37.00 0.121 of times
+		China implies Age > 48.00 0.194 of times
+		China implies 37.00 < Age <= 48.00 0.347 of times
+		China implies Age <= 28.00 0.181 of times
+		China implies 28.00 < Age <= 37.00 0.278 of times
+		Yugoslavia implies 28.00 < Age <= 37.00 0.727 of times
+		Yugoslavia implies Age > 48.00 0.091 of times
+		Yugoslavia implies 37.00 < Age <= 48.00 0.182 of times
+			 Country implies Age 0.3136115638064196 of times
+Searching proxies for feature Age
+	 Feature Workclass:
+		Age > 48.00 implies Self-emp-not-inc 0.124 of times
+		Age > 48.00 implies Private 0.547 of times
+		Age > 48.00 implies ? 0.077 of times
+		Age > 48.00 implies Local-gov 0.084 of times
+		Age > 48.00 implies State-gov 0.04 of times
+		Age > 48.00 implies Federal-gov 0.048 of times
+		Age > 48.00 implies Self-emp-inc 0.079 of times
+		Age > 48.00 implies Without-pay 0.0 of times
+		37.00 < Age <= 48.00 implies State-gov 0.05 of times
+		37.00 < Age <= 48.00 implies Local-gov 0.093 of times
+		37.00 < Age <= 48.00 implies Private 0.648 of times
+		37.00 < Age <= 48.00 implies Self-emp-inc 0.06 of times
+		37.00 < Age <= 48.00 implies ? 0.013 of times
+		37.00 < Age <= 48.00 implies Self-emp-not-inc 0.084 of times
+		37.00 < Age <= 48.00 implies Federal-gov 0.051 of times
+		28.00 < Age <= 37.00 implies Private 0.744 of times
+		28.00 < Age <= 37.00 implies Self-emp-not-inc 0.071 of times
+		28.00 < Age <= 37.00 implies Local-gov 0.057 of times
+		28.00 < Age <= 37.00 implies State-gov 0.039 of times
+		28.00 < Age <= 37.00 implies Self-emp-inc 0.037 of times
+		28.00 < Age <= 37.00 implies Federal-gov 0.03 of times
+		28.00 < Age <= 37.00 implies ? 0.022 of times
+		Age <= 28.00 implies ? 0.085 of times
+		Age <= 28.00 implies Private 0.785 of times
+		Age <= 28.00 implies Local-gov 0.037 of times
+		Age <= 28.00 implies Federal-gov 0.012 of times
+		Age <= 28.00 implies State-gov 0.037 of times
+		Age <= 28.00 implies Self-emp-not-inc 0.033 of times
+		Age <= 28.00 implies Self-emp-inc 0.011 of times
+		Age <= 28.00 implies Without-pay 0.0 of times
+		Age <= 28.00 implies Never-worked 0.001 of times
+			 Age implies Workclass 0.6702331184014738 of times
+	 Feature Education:
+		Age > 48.00 implies High School grad 0.48 of times
+		Age > 48.00 implies Dropout 0.13 of times
+		Age > 48.00 implies Masters 0.098 of times
+		Age > 48.00 implies Bachelors 0.169 of times
+		Age > 48.00 implies Prof-School 0.033 of times
+		Age > 48.00 implies Associates 0.054 of times
+		Age > 48.00 implies Doctorate 0.035 of times
+		37.00 < Age <= 48.00 implies Doctorate 0.027 of times
+		37.00 < Age <= 48.00 implies Bachelors 0.243 of times
+		37.00 < Age <= 48.00 implies High School grad 0.446 of times
+		37.00 < Age <= 48.00 implies Masters 0.104 of times
+		37.00 < Age <= 48.00 implies Prof-School 0.047 of times
+		37.00 < Age <= 48.00 implies Associates 0.082 of times
+		37.00 < Age <= 48.00 implies Dropout 0.05 of times
+		28.00 < Age <= 37.00 implies High School grad 0.496 of times
+		28.00 < Age <= 37.00 implies Dropout 0.063 of times
+		28.00 < Age <= 37.00 implies Bachelors 0.235 of times
+		28.00 < Age <= 37.00 implies Associates 0.099 of times
+		28.00 < Age <= 37.00 implies Doctorate 0.014 of times
+		28.00 < Age <= 37.00 implies Prof-School 0.024 of times
+		28.00 < Age <= 37.00 implies Masters 0.069 of times
+		Age <= 28.00 implies High School grad 0.587 of times
+		Age <= 28.00 implies Bachelors 0.16 of times
+		Age <= 28.00 implies Masters 0.015 of times
+		Age <= 28.00 implies Associates 0.066 of times
+		Age <= 28.00 implies Dropout 0.168 of times
+		Age <= 28.00 implies Prof-School 0.003 of times
+		Age <= 28.00 implies Doctorate 0.0 of times
+			 Age implies Education 0.4942960391128747 of times
+	 Feature Marital Status:
+		Age > 48.00 implies Married 0.716 of times
+		Age > 48.00 implies Separated 0.159 of times
+		Age > 48.00 implies Widowed 0.075 of times
+		Age > 48.00 implies Never-Married 0.05 of times
+		37.00 < Age <= 48.00 implies Never-Married 0.1 of times
+		37.00 < Age <= 48.00 implies Separated 0.188 of times
+		37.00 < Age <= 48.00 implies Married 0.701 of times
+		37.00 < Age <= 48.00 implies Widowed 0.01 of times
+		28.00 < Age <= 37.00 implies Separated 0.143 of times
+		28.00 < Age <= 37.00 implies Married 0.624 of times
+		28.00 < Age <= 37.00 implies Never-Married 0.227 of times
+		28.00 < Age <= 37.00 implies Widowed 0.005 of times
+		Age <= 28.00 implies Married 0.215 of times
+		Age <= 28.00 implies Never-Married 0.729 of times
+		Age <= 28.00 implies Separated 0.055 of times
+		Age <= 28.00 implies Widowed 0.001 of times
+			 Age implies Marital Status 0.6926238220080776 of times
+	 Feature Occupation:
+		Age > 48.00 implies Sales 0.116 of times
+		Age > 48.00 implies White-Collar 0.191 of times
+		Age > 48.00 implies ? 0.077 of times
+		Age > 48.00 implies Professional 0.173 of times
+		Age > 48.00 implies Other 0.047 of times
+		Age > 48.00 implies Blue-Collar 0.259 of times
+		Age > 48.00 implies Admin 0.077 of times
+		Age > 48.00 implies Service 0.058 of times
+		37.00 < Age <= 48.00 implies White-Collar 0.206 of times
+		37.00 < Age <= 48.00 implies Other 0.057 of times
+		37.00 < Age <= 48.00 implies Sales 0.1 of times
+		37.00 < Age <= 48.00 implies Professional 0.212 of times
+		37.00 < Age <= 48.00 implies ? 0.013 of times
+		37.00 < Age <= 48.00 implies Blue-Collar 0.265 of times
+		37.00 < Age <= 48.00 implies Admin 0.101 of times
+		37.00 < Age <= 48.00 implies Service 0.046 of times
+		37.00 < Age <= 48.00 implies Military 0.0 of times
+		28.00 < Age <= 37.00 implies Blue-Collar 0.295 of times
+		28.00 < Age <= 37.00 implies Sales 0.112 of times
+		28.00 < Age <= 37.00 implies Professional 0.167 of times
+		28.00 < Age <= 37.00 implies Other 0.065 of times
+		28.00 < Age <= 37.00 implies White-Collar 0.171 of times
+		28.00 < Age <= 37.00 implies Service 0.076 of times
+		28.00 < Age <= 37.00 implies Admin 0.092 of times
+		28.00 < Age <= 37.00 implies ? 0.022 of times
+		Age <= 28.00 implies ? 0.086 of times
+		Age <= 28.00 implies Blue-Collar 0.287 of times
+		Age <= 28.00 implies Service 0.158 of times
+		Age <= 28.00 implies Admin 0.131 of times
+		Age <= 28.00 implies Professional 0.093 of times
+		Age <= 28.00 implies Sales 0.122 of times
+		Age <= 28.00 implies Other 0.047 of times
+		Age <= 28.00 implies White-Collar 0.076 of times
+			 Age implies Occupation 0.27471125912279454 of times
+	 Feature Relationship:
+		Age > 48.00 implies Husband 0.659 of times
+		Age > 48.00 implies Unmarried 0.077 of times
+		Age > 48.00 implies Not-in-family 0.188 of times
+		Age > 48.00 implies Wife 0.055 of times
+		Age > 48.00 implies Other-relative 0.012 of times
+		Age > 48.00 implies Own-child 0.009 of times
+		37.00 < Age <= 48.00 implies Not-in-family 0.171 of times
+		37.00 < Age <= 48.00 implies Unmarried 0.096 of times
+		37.00 < Age <= 48.00 implies Wife 0.083 of times
+		37.00 < Age <= 48.00 implies Husband 0.614 of times
+		37.00 < Age <= 48.00 implies Own-child 0.025 of times
+		37.00 < Age <= 48.00 implies Other-relative 0.012 of times
+		28.00 < Age <= 37.00 implies Not-in-family 0.22 of times
+		28.00 < Age <= 37.00 implies Husband 0.523 of times
+		28.00 < Age <= 37.00 implies Wife 0.091 of times
+		28.00 < Age <= 37.00 implies Unmarried 0.089 of times
+		28.00 < Age <= 37.00 implies Own-child 0.06 of times
+		28.00 < Age <= 37.00 implies Other-relative 0.017 of times
+		Age <= 28.00 implies Wife 0.043 of times
+		Age <= 28.00 implies Own-child 0.417 of times
+		Age <= 28.00 implies Husband 0.159 of times
+		Age <= 28.00 implies Not-in-family 0.273 of times
+		Age <= 28.00 implies Other-relative 0.057 of times
+		Age <= 28.00 implies Unmarried 0.05 of times
+			 Age implies Relationship 0.5664989725784737 of times
+	 Feature Capital Gain:
+		Age > 48.00 implies High 0.101 of times
+		Age > 48.00 implies None 0.83 of times
+		Age > 48.00 implies Low 0.069 of times
+		37.00 < Age <= 48.00 implies None 0.86 of times
+		37.00 < Age <= 48.00 implies High 0.085 of times
+		37.00 < Age <= 48.00 implies Low 0.055 of times
+		28.00 < Age <= 37.00 implies None 0.872 of times
+		28.00 < Age <= 37.00 implies Low 0.064 of times
+		28.00 < Age <= 37.00 implies High 0.064 of times
+		Age <= 28.00 implies None 0.952 of times
+		Age <= 28.00 implies Low 0.03 of times
+		Age <= 28.00 implies High 0.018 of times
+			 Age implies Capital Gain 0.8726705874016862 of times
+	 Feature Capital Loss:
+		Age > 48.00 implies None 0.924 of times
+		Age > 48.00 implies High 0.052 of times
+		Age > 48.00 implies Low 0.024 of times
+		37.00 < Age <= 48.00 implies None 0.921 of times
+		37.00 < Age <= 48.00 implies Low 0.027 of times
+		37.00 < Age <= 48.00 implies High 0.051 of times
+		28.00 < Age <= 37.00 implies None 0.937 of times
+		28.00 < Age <= 37.00 implies Low 0.034 of times
+		28.00 < Age <= 37.00 implies High 0.029 of times
+		Age <= 28.00 implies None 0.967 of times
+		Age <= 28.00 implies Low 0.021 of times
+		Age <= 28.00 implies High 0.011 of times
+			 Age implies Capital Loss 0.9345993056047616 of times
+	 Feature Hours per week:
+		Age > 48.00 implies 40.00 < Hours per week <= 45.00 0.071 of times
+		Age > 48.00 implies Hours per week <= 40.00 0.651 of times
+		Age > 48.00 implies Hours per week > 45.00 0.278 of times
+		37.00 < Age <= 48.00 implies Hours per week <= 40.00 0.576 of times
+		37.00 < Age <= 48.00 implies Hours per week > 45.00 0.317 of times
+		37.00 < Age <= 48.00 implies 40.00 < Hours per week <= 45.00 0.107 of times
+		28.00 < Age <= 37.00 implies Hours per week <= 40.00 0.587 of times
+		28.00 < Age <= 37.00 implies 40.00 < Hours per week <= 45.00 0.101 of times
+		28.00 < Age <= 37.00 implies Hours per week > 45.00 0.312 of times
+		Age <= 28.00 implies Hours per week <= 40.00 0.816 of times
+		Age <= 28.00 implies Hours per week > 45.00 0.127 of times
+		Age <= 28.00 implies 40.00 < Hours per week <= 45.00 0.057 of times
+			 Age implies Hours per week 0.6452207184865018 of times
+	 Feature Country:
+		Age > 48.00 implies United-States 0.912 of times
+		Age > 48.00 implies ? 0.016 of times
+		Age > 48.00 implies British-Commonwealth 0.014 of times
+		Age > 48.00 implies Latin-America 0.013 of times
+		Age > 48.00 implies SE-Asia 0.007 of times
+		Age > 48.00 implies Euro_1 0.013 of times
+		Age > 48.00 implies Euro_2 0.011 of times
+		Age > 48.00 implies China 0.004 of times
+		Age > 48.00 implies Other 0.007 of times
+		Age > 48.00 implies South-America 0.004 of times
+		Age > 48.00 implies Yugoslavia 0.0 of times
+		37.00 < Age <= 48.00 implies Euro_1 0.006 of times
+		37.00 < Age <= 48.00 implies United-States 0.911 of times
+		37.00 < Age <= 48.00 implies British-Commonwealth 0.012 of times
+		37.00 < Age <= 48.00 implies South-America 0.004 of times
+		37.00 < Age <= 48.00 implies ? 0.02 of times
+		37.00 < Age <= 48.00 implies Latin-America 0.017 of times
+		37.00 < Age <= 48.00 implies SE-Asia 0.011 of times
+		37.00 < Age <= 48.00 implies China 0.006 of times
+		37.00 < Age <= 48.00 implies Other 0.007 of times
+		37.00 < Age <= 48.00 implies Euro_2 0.006 of times
+		37.00 < Age <= 48.00 implies Yugoslavia 0.0 of times
+		28.00 < Age <= 37.00 implies United-States 0.888 of times
+		28.00 < Age <= 37.00 implies Latin-America 0.031 of times
+		28.00 < Age <= 37.00 implies Other 0.009 of times
+		28.00 < Age <= 37.00 implies SE-Asia 0.013 of times
+		28.00 < Age <= 37.00 implies South-America 0.007 of times
+		28.00 < Age <= 37.00 implies ? 0.018 of times
+		28.00 < Age <= 37.00 implies British-Commonwealth 0.011 of times
+		28.00 < Age <= 37.00 implies Yugoslavia 0.002 of times
+		28.00 < Age <= 37.00 implies Euro_1 0.009 of times
+		28.00 < Age <= 37.00 implies China 0.006 of times
+		28.00 < Age <= 37.00 implies Euro_2 0.003 of times
+		Age <= 28.00 implies United-States 0.892 of times
+		Age <= 28.00 implies Latin-America 0.05 of times
+		Age <= 28.00 implies Euro_1 0.008 of times
+		Age <= 28.00 implies Euro_2 0.005 of times
+		Age <= 28.00 implies South-America 0.009 of times
+		Age <= 28.00 implies British-Commonwealth 0.005 of times
+		Age <= 28.00 implies ? 0.014 of times
+		Age <= 28.00 implies SE-Asia 0.011 of times
+		Age <= 28.00 implies China 0.005 of times
+		Age <= 28.00 implies Other 0.002 of times
+			 Age implies Country 0.9023595266775313 of times
+Searching proxies for feature Race
+	 Feature Workclass:
+		Self-emp-not-inc implies White 0.93 of times
+		Self-emp-not-inc implies Black 0.029 of times
+		Self-emp-not-inc implies Other 0.003 of times
+		Self-emp-not-inc implies Amer-Indian-Eskimo 0.008 of times
+		Self-emp-not-inc implies Asian-Pac-Islander 0.031 of times
+		State-gov implies White 0.842 of times
+		State-gov implies Black 0.098 of times
+		State-gov implies Asian-Pac-Islander 0.048 of times
+		State-gov implies Amer-Indian-Eskimo 0.008 of times
+		State-gov implies Other 0.003 of times
+		Private implies White 0.874 of times
+		Private implies Black 0.08 of times
+		Private implies Asian-Pac-Islander 0.033 of times
+		Private implies Other 0.007 of times
+		Private implies Amer-Indian-Eskimo 0.007 of times
+		Local-gov implies White 0.835 of times
+		Local-gov implies Black 0.127 of times
+		Local-gov implies Asian-Pac-Islander 0.024 of times
+		Local-gov implies Amer-Indian-Eskimo 0.011 of times
+		Local-gov implies Other 0.003 of times
+		? implies White 0.835 of times
+		? implies Asian-Pac-Islander 0.041 of times
+		? implies Black 0.098 of times
+		? implies Amer-Indian-Eskimo 0.017 of times
+		? implies Other 0.009 of times
+		Federal-gov implies Black 0.138 of times
+		Federal-gov implies White 0.798 of times
+		Federal-gov implies Asian-Pac-Islander 0.055 of times
+		Federal-gov implies Other 0.002 of times
+		Federal-gov implies Amer-Indian-Eskimo 0.008 of times
+		Self-emp-inc implies White 0.952 of times
+		Self-emp-inc implies Asian-Pac-Islander 0.034 of times
+		Self-emp-inc implies Black 0.013 of times
+		Self-emp-inc implies Other 0.001 of times
+		Without-pay implies White 1.0 of times
+		Never-worked implies White 1.0 of times
+			 Workclass implies Race 0.8734500106284985 of times
+	 Feature Education:
+		High School grad implies White 0.869 of times
+		High School grad implies Black 0.092 of times
+		High School grad implies Asian-Pac-Islander 0.024 of times
+		High School grad implies Other 0.006 of times
+		High School grad implies Amer-Indian-Eskimo 0.009 of times
+		Doctorate implies White 0.905 of times
+		Doctorate implies Asian-Pac-Islander 0.068 of times
+		Doctorate implies Black 0.024 of times
+		Doctorate implies Amer-Indian-Eskimo 0.003 of times
+		Dropout implies White 0.828 of times
+		Dropout implies Black 0.119 of times
+		Dropout implies Asian-Pac-Islander 0.025 of times
+		Dropout implies Amer-Indian-Eskimo 0.012 of times
+		Dropout implies Other 0.016 of times
+		Bachelors implies White 0.89 of times
+		Bachelors implies Asian-Pac-Islander 0.053 of times
+		Bachelors implies Black 0.05 of times
+		Bachelors implies Amer-Indian-Eskimo 0.004 of times
+		Bachelors implies Other 0.002 of times
+		Masters implies Black 0.048 of times
+		Masters implies White 0.911 of times
+		Masters implies Asian-Pac-Islander 0.039 of times
+		Masters implies Other 0.001 of times
+		Masters implies Amer-Indian-Eskimo 0.002 of times
+		Associates implies White 0.87 of times
+		Associates implies Asian-Pac-Islander 0.027 of times
+		Associates implies Black 0.091 of times
+		Associates implies Other 0.004 of times
+		Associates implies Amer-Indian-Eskimo 0.008 of times
+		Prof-School implies White 0.876 of times
+		Prof-School implies Black 0.027 of times
+		Prof-School implies Asian-Pac-Islander 0.075 of times
+		Prof-School implies Other 0.015 of times
+		Prof-School implies Amer-Indian-Eskimo 0.007 of times
+			 Education implies Race 0.8734500106284986 of times
+	 Feature Marital Status:
+		Married implies White 0.905 of times
+		Married implies Black 0.049 of times
+		Married implies Asian-Pac-Islander 0.038 of times
+		Married implies Other 0.004 of times
+		Married implies Amer-Indian-Eskimo 0.005 of times
+		Never-Married implies White 0.833 of times
+		Never-Married implies Black 0.116 of times
+		Never-Married implies Asian-Pac-Islander 0.032 of times
+		Never-Married implies Amer-Indian-Eskimo 0.007 of times
+		Never-Married implies Other 0.011 of times
+		Separated implies White 0.813 of times
+		Separated implies Black 0.144 of times
+		Separated implies Asian-Pac-Islander 0.02 of times
+		Separated implies Amer-Indian-Eskimo 0.016 of times
+		Separated implies Other 0.007 of times
+		Widowed implies White 0.865 of times
+		Widowed implies Black 0.086 of times
+		Widowed implies Asian-Pac-Islander 0.04 of times
+		Widowed implies Other 0.003 of times
+		Widowed implies Amer-Indian-Eskimo 0.006 of times
+			 Marital Status implies Race 0.8734500106284986 of times
+	 Feature Occupation:
+		Sales implies White 0.917 of times
+		Sales implies Asian-Pac-Islander 0.023 of times
+		Sales implies Black 0.052 of times
+		Sales implies Amer-Indian-Eskimo 0.006 of times
+		Sales implies Other 0.003 of times
+		White-Collar implies White 0.914 of times
+		White-Collar implies Asian-Pac-Islander 0.032 of times
+		White-Collar implies Black 0.048 of times
+		White-Collar implies Other 0.002 of times
+		White-Collar implies Amer-Indian-Eskimo 0.005 of times
+		Blue-Collar implies White 0.882 of times
+		Blue-Collar implies Asian-Pac-Islander 0.023 of times
+		Blue-Collar implies Black 0.077 of times
+		Blue-Collar implies Other 0.01 of times
+		Blue-Collar implies Amer-Indian-Eskimo 0.009 of times
+		Other implies White 0.854 of times
+		Other implies Black 0.1 of times
+		Other implies Asian-Pac-Islander 0.035 of times
+		Other implies Amer-Indian-Eskimo 0.007 of times
+		Other implies Other 0.004 of times
+		? implies White 0.835 of times
+		? implies Asian-Pac-Islander 0.041 of times
+		? implies Black 0.098 of times
+		? implies Amer-Indian-Eskimo 0.017 of times
+		? implies Other 0.009 of times
+		Professional implies White 0.892 of times
+		Professional implies Black 0.051 of times
+		Professional implies Amer-Indian-Eskimo 0.005 of times
+		Professional implies Asian-Pac-Islander 0.048 of times
+		Professional implies Other 0.003 of times
+		Service implies White 0.757 of times
+		Service implies Black 0.179 of times
+		Service implies Amer-Indian-Eskimo 0.014 of times
+		Service implies Asian-Pac-Islander 0.041 of times
+		Service implies Other 0.009 of times
+		Admin implies Black 0.121 of times
+		Admin implies White 0.821 of times
+		Admin implies Asian-Pac-Islander 0.047 of times
+		Admin implies Other 0.007 of times
+		Admin implies Amer-Indian-Eskimo 0.004 of times
+		Military implies White 1.0 of times
+			 Occupation implies Race 0.8734500106284987 of times
+	 Feature Relationship:
+		Husband implies White 0.912 of times
+		Husband implies Black 0.044 of times
+		Husband implies Asian-Pac-Islander 0.036 of times
+		Husband implies Other 0.003 of times
+		Husband implies Amer-Indian-Eskimo 0.005 of times
+		Not-in-family implies White 0.863 of times
+		Not-in-family implies Black 0.094 of times
+		Not-in-family implies Amer-Indian-Eskimo 0.011 of times
+		Not-in-family implies Other 0.009 of times
+		Not-in-family implies Asian-Pac-Islander 0.023 of times
+		Unmarried implies White 0.727 of times
+		Unmarried implies Black 0.226 of times
+		Unmarried implies Asian-Pac-Islander 0.025 of times
+		Unmarried implies Other 0.007 of times
+		Unmarried implies Amer-Indian-Eskimo 0.015 of times
+		Wife implies White 0.856 of times
+		Wife implies Black 0.084 of times
+		Wife implies Asian-Pac-Islander 0.047 of times
+		Wife implies Amer-Indian-Eskimo 0.011 of times
+		Wife implies Other 0.002 of times
+		Own-child implies White 0.85 of times
+		Own-child implies Black 0.102 of times
+		Own-child implies Asian-Pac-Islander 0.036 of times
+		Own-child implies Other 0.008 of times
+		Own-child implies Amer-Indian-Eskimo 0.004 of times
+		Other-relative implies Asian-Pac-Islander 0.071 of times
+		Other-relative implies Black 0.123 of times
+		Other-relative implies White 0.756 of times
+		Other-relative implies Other 0.039 of times
+		Other-relative implies Amer-Indian-Eskimo 0.01 of times
+			 Relationship implies Race 0.8734500106284985 of times
+	 Feature Capital Gain:
+		High implies White 0.9 of times
+		High implies Amer-Indian-Eskimo 0.009 of times
+		High implies Black 0.054 of times
+		High implies Asian-Pac-Islander 0.035 of times
+		High implies Other 0.003 of times
+		None implies White 0.869 of times
+		None implies Black 0.084 of times
+		None implies Asian-Pac-Islander 0.034 of times
+		None implies Other 0.007 of times
+		None implies Amer-Indian-Eskimo 0.007 of times
+		Low implies Asian-Pac-Islander 0.032 of times
+		Low implies White 0.914 of times
+		Low implies Black 0.047 of times
+		Low implies Amer-Indian-Eskimo 0.008 of times
+			 Capital Gain implies Race 0.8734500106284986 of times
+	 Feature Capital Loss:
+		None implies White 0.872 of times
+		None implies Black 0.081 of times
+		None implies Asian-Pac-Islander 0.033 of times
+		None implies Other 0.006 of times
+		None implies Amer-Indian-Eskimo 0.008 of times
+		High implies Black 0.039 of times
+		High implies White 0.919 of times
+		High implies Asian-Pac-Islander 0.042 of times
+		Low implies White 0.85 of times
+		Low implies Black 0.079 of times
+		Low implies Asian-Pac-Islander 0.055 of times
+		Low implies Other 0.008 of times
+		Low implies Amer-Indian-Eskimo 0.008 of times
+			 Capital Loss implies Race 0.8734500106284987 of times
+	 Feature Hours per week:
+		40.00 < Hours per week <= 45.00 implies White 0.938 of times
+		40.00 < Hours per week <= 45.00 implies Asian-Pac-Islander 0.02 of times
+		40.00 < Hours per week <= 45.00 implies Black 0.038 of times
+		40.00 < Hours per week <= 45.00 implies Other 0.003 of times
+		40.00 < Hours per week <= 45.00 implies Amer-Indian-Eskimo 0.002 of times
+		Hours per week <= 40.00 implies White 0.842 of times
+		Hours per week <= 40.00 implies Black 0.103 of times
+		Hours per week <= 40.00 implies Asian-Pac-Islander 0.039 of times
+		Hours per week <= 40.00 implies Other 0.008 of times
+		Hours per week <= 40.00 implies Amer-Indian-Eskimo 0.008 of times
+		Hours per week > 45.00 implies White 0.929 of times
+		Hours per week > 45.00 implies Asian-Pac-Islander 0.026 of times
+		Hours per week > 45.00 implies Black 0.037 of times
+		Hours per week > 45.00 implies Other 0.002 of times
+		Hours per week > 45.00 implies Amer-Indian-Eskimo 0.007 of times
+			 Hours per week implies Race 0.8734500106284985 of times
+	 Feature Country:
+		United-States implies White 0.899 of times
+		United-States implies Black 0.079 of times
+		United-States implies Asian-Pac-Islander 0.011 of times
+		United-States implies Amer-Indian-Eskimo 0.007 of times
+		United-States implies Other 0.004 of times
+		Euro_1 implies White 0.96 of times
+		Euro_1 implies Black 0.032 of times
+		Euro_1 implies Asian-Pac-Islander 0.008 of times
+		Latin-America implies White 0.744 of times
+		Latin-America implies Black 0.186 of times
+		Latin-America implies Other 0.061 of times
+		Latin-America implies Asian-Pac-Islander 0.006 of times
+		Latin-America implies Amer-Indian-Eskimo 0.003 of times
+		Other implies White 0.674 of times
+		Other implies Black 0.021 of times
+		Other implies Asian-Pac-Islander 0.284 of times
+		Other implies Other 0.021 of times
+		SE-Asia implies Asian-Pac-Islander 0.925 of times
+		SE-Asia implies White 0.055 of times
+		SE-Asia implies Black 0.014 of times
+		SE-Asia implies Amer-Indian-Eskimo 0.007 of times
+		South-America implies White 0.91 of times
+		South-America implies Other 0.064 of times
+		South-America implies Amer-Indian-Eskimo 0.026 of times
+		? implies White 0.724 of times
+		? implies Asian-Pac-Islander 0.134 of times
+		? implies Black 0.118 of times
+		? implies Other 0.024 of times
+		British-Commonwealth implies White 0.675 of times
+		British-Commonwealth implies Asian-Pac-Islander 0.266 of times
+		British-Commonwealth implies Other 0.019 of times
+		British-Commonwealth implies Black 0.039 of times
+		Euro_2 implies Asian-Pac-Islander 0.418 of times
+		Euro_2 implies White 0.549 of times
+		Euro_2 implies Amer-Indian-Eskimo 0.033 of times
+		China implies Asian-Pac-Islander 0.917 of times
+		China implies White 0.069 of times
+		China implies Amer-Indian-Eskimo 0.014 of times
+		Yugoslavia implies White 1.0 of times
+			 Country implies Race 0.8867710621412882 of times
+Searching proxies for feature Race
+	 Feature Workclass:
+		White implies Self-emp-not-inc 0.087 of times
+		White implies State-gov 0.041 of times
+		White implies Private 0.67 of times
+		White implies Local-gov 0.068 of times
+		White implies ? 0.044 of times
+		White implies Self-emp-inc 0.055 of times
+		White implies Federal-gov 0.034 of times
+		White implies Without-pay 0.0 of times
+		White implies Never-worked 0.0 of times
+		Black implies Private 0.674 of times
+		Black implies Local-gov 0.114 of times
+		Black implies Federal-gov 0.065 of times
+		Black implies State-gov 0.053 of times
+		Black implies Self-emp-not-inc 0.029 of times
+		Black implies ? 0.057 of times
+		Black implies Self-emp-inc 0.008 of times
+		Asian-Pac-Islander implies Local-gov 0.05 of times
+		Asian-Pac-Islander implies Private 0.646 of times
+		Asian-Pac-Islander implies ? 0.056 of times
+		Asian-Pac-Islander implies Federal-gov 0.061 of times
+		Asian-Pac-Islander implies Self-emp-not-inc 0.075 of times
+		Asian-Pac-Islander implies State-gov 0.061 of times
+		Asian-Pac-Islander implies Self-emp-inc 0.05 of times
+		Other implies Self-emp-not-inc 0.036 of times
+		Other implies Private 0.81 of times
+		Other implies Federal-gov 0.012 of times
+		Other implies ? 0.071 of times
+		Other implies State-gov 0.024 of times
+		Other implies Local-gov 0.036 of times
+		Other implies Self-emp-inc 0.012 of times
+		Amer-Indian-Eskimo implies Local-gov 0.107 of times
+		Amer-Indian-Eskimo implies Private 0.612 of times
+		Amer-Indian-Eskimo implies Self-emp-not-inc 0.087 of times
+		Amer-Indian-Eskimo implies ? 0.107 of times
+		Amer-Indian-Eskimo implies State-gov 0.049 of times
+		Amer-Indian-Eskimo implies Federal-gov 0.039 of times
+			 Race implies Workclass 0.6702331184014738 of times
+	 Feature Education:
+		White implies High School grad 0.492 of times
+		White implies Doctorate 0.022 of times
+		White implies Dropout 0.092 of times
+		White implies Bachelors 0.209 of times
+		White implies Associates 0.075 of times
+		White implies Masters 0.08 of times
+		White implies Prof-School 0.029 of times
+		Black implies High School grad 0.575 of times
+		Black implies Masters 0.046 of times
+		Black implies Bachelors 0.13 of times
+		Black implies Prof-School 0.01 of times
+		Black implies Dropout 0.145 of times
+		Black implies Associates 0.087 of times
+		Black implies Doctorate 0.006 of times
+		Asian-Pac-Islander implies Bachelors 0.32 of times
+		Asian-Pac-Islander implies Masters 0.088 of times
+		Asian-Pac-Islander implies High School grad 0.351 of times
+		Asian-Pac-Islander implies Associates 0.061 of times
+		Asian-Pac-Islander implies Prof-School 0.065 of times
+		Asian-Pac-Islander implies Dropout 0.073 of times
+		Asian-Pac-Islander implies Doctorate 0.042 of times
+		Other implies High School grad 0.524 of times
+		Other implies Prof-School 0.071 of times
+		Other implies Dropout 0.262 of times
+		Other implies Associates 0.048 of times
+		Other implies Masters 0.012 of times
+		Other implies Bachelors 0.083 of times
+		Amer-Indian-Eskimo implies Bachelors 0.126 of times
+		Amer-Indian-Eskimo implies High School grad 0.583 of times
+		Amer-Indian-Eskimo implies Dropout 0.155 of times
+		Amer-Indian-Eskimo implies Associates 0.078 of times
+		Amer-Indian-Eskimo implies Masters 0.019 of times
+		Amer-Indian-Eskimo implies Prof-School 0.029 of times
+		Amer-Indian-Eskimo implies Doctorate 0.01 of times
+			 Race implies Education 0.4942960391128746 of times
+	 Feature Marital Status:
+		White implies Married 0.614 of times
+		White implies Never-Married 0.228 of times
+		White implies Separated 0.134 of times
+		White implies Widowed 0.024 of times
+		Black implies Married 0.363 of times
+		Black implies Never-Married 0.35 of times
+		Black implies Separated 0.26 of times
+		Black implies Widowed 0.027 of times
+		Asian-Pac-Islander implies Married 0.657 of times
+		Asian-Pac-Islander implies Never-Married 0.228 of times
+		Asian-Pac-Islander implies Widowed 0.029 of times
+		Asian-Pac-Islander implies Separated 0.086 of times
+		Other implies Married 0.381 of times
+		Other implies Never-Married 0.44 of times
+		Other implies Separated 0.167 of times
+		Other implies Widowed 0.012 of times
+		Amer-Indian-Eskimo implies Never-Married 0.223 of times
+		Amer-Indian-Eskimo implies Married 0.437 of times
+		Amer-Indian-Eskimo implies Separated 0.32 of times
+		Amer-Indian-Eskimo implies Widowed 0.019 of times
+			 Race implies Marital Status 0.5933536455750017 of times
+	 Feature Occupation:
+		White implies Sales 0.117 of times
+		White implies White-Collar 0.177 of times
+		White implies Blue-Collar 0.277 of times
+		White implies Other 0.053 of times
+		White implies ? 0.044 of times
+		White implies Professional 0.171 of times
+		White implies Service 0.068 of times
+		White implies Admin 0.093 of times
+		White implies Military 0.0 of times
+		Black implies Other 0.069 of times
+		Black implies Professional 0.109 of times
+		Black implies Admin 0.15 of times
+		Black implies White-Collar 0.102 of times
+		Black implies Service 0.176 of times
+		Black implies Blue-Collar 0.266 of times
+		Black implies Sales 0.072 of times
+		Black implies ? 0.057 of times
+		Asian-Pac-Islander implies Sales 0.075 of times
+		Asian-Pac-Islander implies White-Collar 0.159 of times
+		Asian-Pac-Islander implies ? 0.056 of times
+		Asian-Pac-Islander implies Blue-Collar 0.184 of times
+		Asian-Pac-Islander implies Admin 0.136 of times
+		Asian-Pac-Islander implies Professional 0.238 of times
+		Asian-Pac-Islander implies Service 0.094 of times
+		Asian-Pac-Islander implies Other 0.056 of times
+		Other implies Blue-Collar 0.476 of times
+		Other implies Professional 0.083 of times
+		Other implies Admin 0.119 of times
+		Other implies White-Collar 0.048 of times
+		Other implies ? 0.071 of times
+		Other implies Service 0.119 of times
+		Other implies Other 0.036 of times
+		Other implies Sales 0.048 of times
+		Amer-Indian-Eskimo implies Professional 0.126 of times
+		Amer-Indian-Eskimo implies Blue-Collar 0.32 of times
+		Amer-Indian-Eskimo implies Service 0.146 of times
+		Amer-Indian-Eskimo implies ? 0.107 of times
+		Amer-Indian-Eskimo implies Other 0.049 of times
+		Amer-Indian-Eskimo implies Admin 0.049 of times
+		Amer-Indian-Eskimo implies Sales 0.097 of times
+		Amer-Indian-Eskimo implies White-Collar 0.107 of times
+			 Race implies Occupation 0.27655353220435064 of times
+	 Feature Relationship:
+		White implies Husband 0.54 of times
+		White implies Not-in-family 0.204 of times
+		White implies Unmarried 0.067 of times
+		White implies Wife 0.068 of times
+		White implies Own-child 0.102 of times
+		White implies Other-relative 0.019 of times
+		Black implies Husband 0.285 of times
+		Black implies Wife 0.073 of times
+		Black implies Own-child 0.135 of times
+		Black implies Unmarried 0.229 of times
+		Black implies Not-in-family 0.244 of times
+		Black implies Other-relative 0.034 of times
+		Asian-Pac-Islander implies Husband 0.546 of times
+		Asian-Pac-Islander implies Other-relative 0.046 of times
+		Asian-Pac-Islander implies Own-child 0.111 of times
+		Asian-Pac-Islander implies Wife 0.096 of times
+		Asian-Pac-Islander implies Not-in-family 0.142 of times
+		Asian-Pac-Islander implies Unmarried 0.059 of times
+		Other implies Other-relative 0.143 of times
+		Other implies Not-in-family 0.298 of times
+		Other implies Husband 0.298 of times
+		Other implies Unmarried 0.095 of times
+		Other implies Own-child 0.143 of times
+		Other implies Wife 0.024 of times
+		Amer-Indian-Eskimo implies Not-in-family 0.32 of times
+		Amer-Indian-Eskimo implies Husband 0.32 of times
+		Amer-Indian-Eskimo implies Wife 0.107 of times
+		Amer-Indian-Eskimo implies Unmarried 0.165 of times
+		Amer-Indian-Eskimo implies Own-child 0.058 of times
+		Amer-Indian-Eskimo implies Other-relative 0.029 of times
+			 Race implies Relationship 0.5164741727485298 of times
+	 Feature Capital Gain:
+		White implies High 0.073 of times
+		White implies None 0.868 of times
+		White implies Low 0.059 of times
+		Black implies None 0.919 of times
+		Black implies Low 0.033 of times
+		Black implies High 0.048 of times
+		Asian-Pac-Islander implies Low 0.052 of times
+		Asian-Pac-Islander implies None 0.874 of times
+		Asian-Pac-Islander implies High 0.073 of times
+		Other implies None 0.964 of times
+		Other implies High 0.036 of times
+		Amer-Indian-Eskimo implies None 0.854 of times
+		Amer-Indian-Eskimo implies High 0.087 of times
+		Amer-Indian-Eskimo implies Low 0.058 of times
+			 Race implies Capital Gain 0.8726705874016863 of times
+	 Feature Capital Loss:
+		White implies None 0.933 of times
+		White implies Low 0.026 of times
+		White implies High 0.04 of times
+		Black implies None 0.955 of times
+		Black implies High 0.019 of times
+		Black implies Low 0.027 of times
+		Asian-Pac-Islander implies None 0.908 of times
+		Asian-Pac-Islander implies Low 0.044 of times
+		Asian-Pac-Islander implies High 0.048 of times
+		Other implies None 0.964 of times
+		Other implies Low 0.036 of times
+		Amer-Indian-Eskimo implies None 0.971 of times
+		Amer-Indian-Eskimo implies Low 0.029 of times
+			 Race implies Capital Loss 0.9345993056047617 of times
+	 Feature Hours per week:
+		White implies 40.00 < Hours per week <= 45.00 0.093 of times
+		White implies Hours per week <= 40.00 0.622 of times
+		White implies Hours per week > 45.00 0.285 of times
+		Black implies Hours per week <= 40.00 0.833 of times
+		Black implies Hours per week > 45.00 0.126 of times
+		Black implies 40.00 < Hours per week <= 45.00 0.041 of times
+		Asian-Pac-Islander implies Hours per week <= 40.00 0.745 of times
+		Asian-Pac-Islander implies Hours per week > 45.00 0.205 of times
+		Asian-Pac-Islander implies 40.00 < Hours per week <= 45.00 0.05 of times
+		Other implies Hours per week > 45.00 0.071 of times
+		Other implies Hours per week <= 40.00 0.881 of times
+		Other implies 40.00 < Hours per week <= 45.00 0.048 of times
+		Amer-Indian-Eskimo implies Hours per week > 45.00 0.243 of times
+		Amer-Indian-Eskimo implies Hours per week <= 40.00 0.738 of times
+		Amer-Indian-Eskimo implies 40.00 < Hours per week <= 45.00 0.019 of times
+			 Race implies Hours per week 0.6452207184865019 of times
+	 Feature Country:
+		White implies United-States 0.929 of times
+		White implies Euro_1 0.01 of times
+		White implies Latin-America 0.022 of times
+		White implies Other 0.005 of times
+		White implies South-America 0.006 of times
+		White implies ? 0.014 of times
+		White implies British-Commonwealth 0.008 of times
+		White implies Euro_2 0.004 of times
+		White implies Yugoslavia 0.001 of times
+		White implies SE-Asia 0.001 of times
+		White implies China 0.0 of times
+		Black implies United-States 0.902 of times
+		Black implies Other 0.002 of times
+		Black implies Latin-America 0.06 of times
+		Black implies ? 0.026 of times
+		Black implies British-Commonwealth 0.005 of times
+		Black implies Euro_1 0.004 of times
+		Black implies SE-Asia 0.002 of times
+		Asian-Pac-Islander implies SE-Asia 0.282 of times
+		Asian-Pac-Islander implies ? 0.069 of times
+		Asian-Pac-Islander implies Euro_2 0.079 of times
+		Asian-Pac-Islander implies United-States 0.282 of times
+		Asian-Pac-Islander implies British-Commonwealth 0.086 of times
+		Asian-Pac-Islander implies China 0.138 of times
+		Asian-Pac-Islander implies Other 0.056 of times
+		Asian-Pac-Islander implies Latin-America 0.004 of times
+		Asian-Pac-Islander implies Euro_1 0.002 of times
+		Other implies South-America 0.06 of times
+		Other implies British-Commonwealth 0.036 of times
+		Other implies United-States 0.548 of times
+		Other implies Latin-America 0.262 of times
+		Other implies ? 0.071 of times
+		Other implies Other 0.024 of times
+		Amer-Indian-Eskimo implies United-States 0.922 of times
+		Amer-Indian-Eskimo implies South-America 0.019 of times
+		Amer-Indian-Eskimo implies Latin-America 0.01 of times
+		Amer-Indian-Eskimo implies SE-Asia 0.01 of times
+		Amer-Indian-Eskimo implies Euro_2 0.029 of times
+		Amer-Indian-Eskimo implies China 0.01 of times
+			 Race implies Country 0.9023595266775314 of times
+Searching proxies for feature Sex
+	 Feature Workclass:
+		Self-emp-not-inc implies Male 0.858 of times
+		Self-emp-not-inc implies Female 0.142 of times
+		State-gov implies Female 0.331 of times
+		State-gov implies Male 0.669 of times
+		Private implies Female 0.278 of times
+		Private implies Male 0.722 of times
+		Local-gov implies Female 0.351 of times
+		Local-gov implies Male 0.649 of times
+		? implies Male 0.551 of times
+		? implies Female 0.449 of times
+		Federal-gov implies Female 0.259 of times
+		Federal-gov implies Male 0.741 of times
+		Self-emp-inc implies Male 0.894 of times
+		Self-emp-inc implies Female 0.106 of times
+		Without-pay implies Male 0.5 of times
+		Without-pay implies Female 0.5 of times
+		Never-worked implies Male 1.0 of times
+			 Workclass implies Sex 0.7267767306738468 of times
+	 Feature Education:
+		High School grad implies Male 0.703 of times
+		High School grad implies Female 0.297 of times
+		Doctorate implies Female 0.186 of times
+		Doctorate implies Male 0.814 of times
+		Dropout implies Male 0.723 of times
+		Dropout implies Female 0.277 of times
+		Bachelors implies Female 0.226 of times
+		Bachelors implies Male 0.774 of times
+		Masters implies Female 0.281 of times
+		Masters implies Male 0.719 of times
+		Associates implies Male 0.69 of times
+		Associates implies Female 0.31 of times
+		Prof-School implies Male 0.867 of times
+		Prof-School implies Female 0.133 of times
+			 Education implies Sex 0.7267767306738468 of times
+	 Feature Marital Status:
+		Married implies Male 0.878 of times
+		Married implies Female 0.122 of times
+		Never-Married implies Female 0.431 of times
+		Never-Married implies Male 0.569 of times
+		Separated implies Female 0.543 of times
+		Separated implies Male 0.457 of times
+		Widowed implies Female 0.807 of times
+		Widowed implies Male 0.193 of times
+			 Marital Status implies Sex 0.7541274002692554 of times
+	 Feature Occupation:
+		Sales implies Male 0.741 of times
+		Sales implies Female 0.259 of times
+		White-Collar implies Female 0.224 of times
+		White-Collar implies Male 0.776 of times
+		Blue-Collar implies Male 0.916 of times
+		Blue-Collar implies Female 0.084 of times
+		Other implies Female 0.208 of times
+		Other implies Male 0.792 of times
+		? implies Male 0.553 of times
+		? implies Female 0.447 of times
+		Professional implies Male 0.696 of times
+		Professional implies Female 0.304 of times
+		Service implies Male 0.45 of times
+		Service implies Female 0.55 of times
+		Admin implies Female 0.582 of times
+		Admin implies Male 0.418 of times
+		Military implies Male 1.0 of times
+			 Occupation implies Sex 0.7507262807340749 of times
+	 Feature Relationship:
+		Husband implies Male 1.0 of times
+		Not-in-family implies Female 0.443 of times
+		Not-in-family implies Male 0.557 of times
+		Unmarried implies Female 0.736 of times
+		Unmarried implies Male 0.264 of times
+		Wife implies Female 1.0 of times
+		Own-child implies Male 0.575 of times
+		Own-child implies Female 0.425 of times
+		Other-relative implies Female 0.377 of times
+		Other-relative implies Male 0.623 of times
+			 Relationship implies Sex 0.8343371359739247 of times
+	 Feature Capital Gain:
+		High implies Male 0.796 of times
+		High implies Female 0.204 of times
+		None implies Female 0.283 of times
+		None implies Male 0.717 of times
+		Low implies Male 0.785 of times
+		Low implies Female 0.215 of times
+			 Capital Gain implies Sex 0.7267767306738468 of times
+	 Feature Capital Loss:
+		None implies Male 0.721 of times
+		None implies Female 0.279 of times
+		High implies Female 0.158 of times
+		High implies Male 0.842 of times
+		Low implies Male 0.755 of times
+		Low implies Female 0.245 of times
+			 Capital Loss implies Sex 0.7267767306738468 of times
+	 Feature Hours per week:
+		40.00 < Hours per week <= 45.00 implies Male 0.821 of times
+		40.00 < Hours per week <= 45.00 implies Female 0.179 of times
+		Hours per week <= 40.00 implies Female 0.344 of times
+		Hours per week <= 40.00 implies Male 0.656 of times
+		Hours per week > 45.00 implies Male 0.865 of times
+		Hours per week > 45.00 implies Female 0.135 of times
+			 Hours per week implies Sex 0.7267767306738467 of times
+	 Feature Country:
+		United-States implies Male 0.726 of times
+		United-States implies Female 0.274 of times
+		Euro_1 implies Female 0.264 of times
+		Euro_1 implies Male 0.736 of times
+		Latin-America implies Male 0.703 of times
+		Latin-America implies Female 0.297 of times
+		Other implies Male 0.811 of times
+		Other implies Female 0.189 of times
+		SE-Asia implies Male 0.705 of times
+		SE-Asia implies Female 0.295 of times
+		South-America implies Male 0.731 of times
+		South-America implies Female 0.269 of times
+		? implies Male 0.736 of times
+		? implies Female 0.264 of times
+		British-Commonwealth implies Female 0.273 of times
+		British-Commonwealth implies Male 0.727 of times
+		Euro_2 implies Female 0.286 of times
+		Euro_2 implies Male 0.714 of times
+		China implies Female 0.222 of times
+		China implies Male 0.778 of times
+		Yugoslavia implies Male 1.0 of times
+			 Country implies Sex 0.726776730673847 of times
+Searching proxies for feature Sex
+	 Feature Workclass:
+		Male implies Self-emp-not-inc 0.096 of times
+		Male implies Private 0.665 of times
+		Male implies ? 0.035 of times
+		Male implies Local-gov 0.064 of times
+		Male implies Self-emp-inc 0.062 of times
+		Male implies State-gov 0.039 of times
+		Male implies Federal-gov 0.038 of times
+		Male implies Without-pay 0.0 of times
+		Male implies Never-worked 0.0 of times
+		Female implies State-gov 0.052 of times
+		Female implies Private 0.683 of times
+		Female implies Local-gov 0.092 of times
+		Female implies ? 0.076 of times
+		Female implies Federal-gov 0.036 of times
+		Female implies Self-emp-not-inc 0.043 of times
+		Female implies Self-emp-inc 0.019 of times
+		Female implies Without-pay 0.0 of times
+			 Sex implies Workclass 0.6702331184014738 of times
+	 Feature Education:
+		Male implies High School grad 0.478 of times
+		Male implies Dropout 0.097 of times
+		Male implies Bachelors 0.219 of times
+		Male implies Associates 0.072 of times
+		Male implies Masters 0.076 of times
+		Male implies Prof-School 0.035 of times
+		Male implies Doctorate 0.023 of times
+		Female implies Doctorate 0.014 of times
+		Female implies High School grad 0.538 of times
+		Female implies Bachelors 0.17 of times
+		Female implies Masters 0.079 of times
+		Female implies Dropout 0.099 of times
+		Female implies Associates 0.086 of times
+		Female implies Prof-School 0.014 of times
+			 Sex implies Education 0.4942960391128747 of times
+	 Feature Marital Status:
+		Male implies Married 0.716 of times
+		Male implies Separated 0.091 of times
+		Male implies Never-Married 0.187 of times
+		Male implies Widowed 0.007 of times
+		Female implies Never-Married 0.376 of times
+		Female implies Separated 0.286 of times
+		Female implies Married 0.265 of times
+		Female implies Widowed 0.073 of times
+			 Sex implies Marital Status 0.6233260114787784 of times
+	 Feature Occupation:
+		Male implies Sales 0.113 of times
+		Male implies Blue-Collar 0.346 of times
+		Male implies ? 0.035 of times
+		Male implies Professional 0.161 of times
+		Male implies Other 0.059 of times
+		Male implies Service 0.048 of times
+		Male implies White-Collar 0.18 of times
+		Male implies Admin 0.057 of times
+		Male implies Military 0.0 of times
+		Female implies White-Collar 0.138 of times
+		Female implies Other 0.041 of times
+		Female implies Sales 0.106 of times
+		Female implies ? 0.076 of times
+		Female implies Professional 0.187 of times
+		Female implies Admin 0.21 of times
+		Female implies Blue-Collar 0.085 of times
+		Female implies Service 0.157 of times
+			 Sex implies Occupation 0.3087933111315808 of times
+	 Feature Relationship:
+		Male implies Husband 0.711 of times
+		Male implies Not-in-family 0.158 of times
+		Male implies Own-child 0.083 of times
+		Male implies Unmarried 0.029 of times
+		Male implies Other-relative 0.019 of times
+		Female implies Not-in-family 0.335 of times
+		Female implies Unmarried 0.217 of times
+		Female implies Wife 0.254 of times
+		Female implies Own-child 0.163 of times
+		Female implies Other-relative 0.03 of times
+			 Sex implies Relationship 0.60809183022745 of times
+	 Feature Capital Gain:
+		Male implies High 0.078 of times
+		Male implies None 0.861 of times
+		Male implies Low 0.06 of times
+		Female implies None 0.903 of times
+		Female implies High 0.053 of times
+		Female implies Low 0.044 of times
+			 Sex implies Capital Gain 0.8726705874016865 of times
+	 Feature Capital Loss:
+		Male implies None 0.927 of times
+		Male implies Low 0.028 of times
+		Male implies High 0.045 of times
+		Female implies None 0.954 of times
+		Female implies High 0.022 of times
+		Female implies Low 0.024 of times
+			 Sex implies Capital Loss 0.9345993056047617 of times
+	 Feature Hours per week:
+		Male implies 40.00 < Hours per week <= 45.00 0.098 of times
+		Male implies Hours per week <= 40.00 0.583 of times
+		Male implies Hours per week > 45.00 0.319 of times
+		Female implies Hours per week <= 40.00 0.811 of times
+		Female implies Hours per week > 45.00 0.132 of times
+		Female implies 40.00 < Hours per week <= 45.00 0.057 of times
+			 Sex implies Hours per week 0.6452207184865019 of times
+	 Feature Country:
+		Male implies United-States 0.902 of times
+		Male implies Latin-America 0.025 of times
+		Male implies Other 0.008 of times
+		Male implies SE-Asia 0.01 of times
+		Male implies South-America 0.006 of times
+		Male implies ? 0.018 of times
+		Male implies Euro_1 0.009 of times
+		Male implies British-Commonwealth 0.011 of times
+		Male implies Euro_2 0.006 of times
+		Male implies Yugoslavia 0.001 of times
+		Male implies China 0.005 of times
+		Female implies Euro_1 0.009 of times
+		Female implies United-States 0.904 of times
+		Female implies Latin-America 0.028 of times
+		Female implies British-Commonwealth 0.011 of times
+		Female implies Euro_2 0.007 of times
+		Female implies South-America 0.005 of times
+		Female implies SE-Asia 0.011 of times
+		Female implies China 0.004 of times
+		Female implies ? 0.017 of times
+		Female implies Other 0.005 of times
+			 Sex implies Country 0.9023595266775313 of times
