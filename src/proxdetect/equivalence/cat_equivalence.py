@@ -62,7 +62,7 @@ def detect_cat_eq(data_info, proc_num):
         if( eq and (len(set(cat_relations.values)) == len(cat_relations.values)) ): #eq and all values are different
             print('\t \t directly equivalent.')
         
-def detect_margin_eq(data_info, proc_num):
+def detectMarginEq(data_info, proc_num):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
     print('Searching proxies for feature '+feature_labels[proc_num])
@@ -91,7 +91,7 @@ def detect_margin_eq(data_info, proc_num):
             print(v, max_key, max(cat_relations[v][1].values()) /abs_occurence)
 
 #This applies the Normalized Mutual Information definition of a proxy attribute
-def detect_NMI_eq(data_info, proc_num):
+def detectNMIEq(data_info, proc_num):
     
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
@@ -101,7 +101,7 @@ def detect_NMI_eq(data_info, proc_num):
         data_info.feature_margins[feature_labels[proc_num]][feature_labels[np]] = normalized_mutual_info_score(proc_feat, np_feat)
 
 
-def generate_pair_count(data_info, proc_num, nproc_num):
+def generatePairCount(data_info, proc_num, nproc_num):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]]    #list with all values of the protected feature
     nproc_feat = data_info.data[feature_labels[nproc_num]]   #list with all values of the non-protected feature
@@ -143,14 +143,14 @@ if __name__ == '__main__':
     print("==================== Searching for Categorical Equivalence ==================")
     print()
     #for p_feature in data_info.protected_features:
-    #    detect_margin_eq(data_info, p_feature)
+    #    detectMarginEq(data_info, p_feature)
 
     #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
     #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
     #plt.show()
     p_feature = data_info.protected_features[2]
     for np_feature in data_info.non_protected_features:
-        generate_pair_count(data_info, p_feature, np_feature)
+        generatePairCount(data_info, p_feature, np_feature)
 
         
 

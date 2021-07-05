@@ -132,8 +132,70 @@ def detectMarginImp(data_info, proc_num, direction):
             print("\t\t\t {} implies {} {} of times".format(feature_labels[proc_num], feature_labels[j] , margin))
 
 def visualizeAttributeImp(data, np_num, p_num):
+    feature_labels  = data.columns
+    proc_feat = data[feature_labels[p_num]]     #list with all values of the protected feature
+    nproc_feat = data[feature_labels[np_num]]   #list with all values of the non-protected feature
+
+    num_examples = len(proc_feat)
     
-        
+    right_implication = dict()
+    left_implication = dict()
+
+    for i in range(num_examples):
+        proc_value = proc_feat[i]
+        nproc_value = nproc_feat[i]
+
+        if proc_value in left_implication:
+            left_implication[proc_value][0] +=1 
+            if nproc_value in  left_implication[proc_value][1]:
+                left_implication[proc_value][1][nproc_value] += 1
+            else:
+                left_implication[proc_value][1][nproc_value] = 1
+        else: 
+            left_implication[proc_value] = [1, {nproc_value: 1}]
+
+        if nproc_value in right_implication:
+            right_implication[nproc_value][0] +=1 
+            if proc_value in  right_implication[nproc_value][1]:
+                right_implication[nproc_value][1][proc_value] += 1
+            else:
+                right_implication[nproc_value][1][proc_value] = 1
+        else: 
+            right_implication[nproc_value] = [1, {proc_value: 1}]
+
+    left_imp_scores = dict()
+    for v in left_implication: 
+        abs_occurence = left_implication[v][0]
+        for nproc_value in left_implication[v][1]:
+            if v in left_imp_scores:
+                left_imp_scores[v][nproc_value] = round(left_implication[v][1][nproc_value]/abs_occurence, 3)
+            else:
+                left_imp_scores[v] = {nproc_value: round(left_implication[v][1][nproc_value]/abs_occurence, 3) }
+
+    print(left_imp_scores)
+
+    right_imp_scores = dict()
+    for v in right_implication: 
+        abs_occurence = right_implication[v][0]
+        for proc_value in right_implication[v][1]:
+            if v in right_imp_scores:
+                right_imp_scores[v][proc_value] = round(right_implication[v][1][proc_value]/abs_occurence, 3)
+            else:
+                right_imp_scores[v] = {proc_value: round(right_implication[v][1][proc_value]/abs_occurence, 3) }
+
+    print(right_imp_scores)
+
+    left = pd.DataFrame.from_dict(left_imp_scores)
+    right = pd.DataFrame.from_dict(right_imp_scores)
+
+    f, (ax1, ax2) = plt.subplots(ncols=2)
+
+
+    sns.heatmap(left, annot=True, fmt = 'g', ax=ax2)
+    sns.heatmap(right, annot=True, fmt = 'g', ax=ax1)
+    
+    plt.show()
+
 #==============================================================================
 if __name__ == '__main__':
     inputCheck()
@@ -141,10 +203,10 @@ if __name__ == '__main__':
     print()
 
     # To test both directions an output detailed .txt files #
-    data_info = DataInfo(sys.argv)
-    for p_feature in data_info.protected_features:
-        detectMarginImp(data_info, p_feature, "right")
-        detectMarginImp(data_info, p_feature, "left")
+    #data_info = DataInfo(sys.argv)
+    #for p_feature in data_info.protected_features:
+     #   detectMarginImp(data_info, p_feature, "right")
+     #   detectMarginImp(data_info, p_feature, "left")
 
     # To generate visualizations between two attributes #
     data = pd.read_csv(sys.argv[1])
