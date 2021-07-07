@@ -185,14 +185,17 @@ def visualizeAttributeImp(data, np_num, p_num):
 
     print(right_imp_scores)
 
-    left = pd.DataFrame.from_dict(left_imp_scores)
-    right = pd.DataFrame.from_dict(right_imp_scores)
+    left = pd.DataFrame.from_dict(left_imp_scores).transpose()
+    right = pd.DataFrame.from_dict(right_imp_scores).transpose()
 
     f, (ax1, ax2) = plt.subplots(ncols=2)
 
 
     sns.heatmap(left, annot=True, fmt = 'g', ax=ax2)
     sns.heatmap(right, annot=True, fmt = 'g', ax=ax1)
+ 
+    ax1.set_title("{} -> {}".format(feature_labels[np_num], feature_labels[p_num]))
+    ax2.set_title("{} -> {}".format(feature_labels[p_num], feature_labels[np_num]))
     
     plt.show()
 
