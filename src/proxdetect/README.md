@@ -39,14 +39,14 @@ python cat_implication.py dataset_relative_path(.csv) num-total-attributes num-p
 ### COMPAS
 COMPAS comprises a list of criminals and their **recidivism classification**. It has a total of **12 attributes**, where **6** of them are *protected*:
 
-#####Non-Protected Attributes:
+##### Non-Protected Attributes:
 * Number_of_Priors
 * score_factor
 * Age_Above_FourtyFive
 * Age_Below_TwentyFive
 * Misdemeanor
 
-#####Protected Attributes:
+##### Protected Attributes:
 * African_American
 * Asian
 * Hispanic
@@ -64,7 +64,7 @@ python cat_implication.py ../../../bench/compas/compas.csv 12 6 4 5 6 7 8 9
 
 ### Adult
 It has a total of **13 attributes**, where **3** of them are *protected*:
-#####Non-Protected Attributes:
+##### Non-Protected Attributes:
 * Workclass
 * Education
 * Marital Status
@@ -75,7 +75,7 @@ It has a total of **13 attributes**, where **3** of them are *protected*:
 * Hours per week
 * Country
 
-#####Protected Attributes:
+##### Protected Attributes:
 * Age
 * Race
 * Sex
@@ -91,7 +91,7 @@ python cat_implication.py ../../../bench/adult/adult_data.csv 13 3 0 6 7
 ### German
 It has a total of **22 attributes**, where **6** of them are *protected*:
 
-#####Non-Protected Attributes:
+##### Non-Protected Attributes:
 * checking_status
 * duration
 * credit_history
@@ -111,7 +111,7 @@ It has a total of **22 attributes**, where **6** of them are *protected*:
 * num_dependents
 * own_telephone
 
-#####Protected Attributes:
+##### Protected Attributes:
 * age
 * age_cat
 * foreign_worker
@@ -142,6 +142,3 @@ python cat_equivalence.py ../../../bench/titanic/titanic_data.csv 8 2 2 3
 python cat_implication.py ../../../bench/titanic/titanic_data.csv 8 2 2 3 
 ```
 
-###Census Income
-
-###Communities & Crime
