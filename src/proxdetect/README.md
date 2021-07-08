@@ -1,7 +1,7 @@
-#Proxy Detection Scripts
+# Proxy Detection Scripts
 These sets of scripts attempt to find **proxy** attributes of *protected* attributes within a dataset. 
 
-##Binary Equivalence
+## Binary Equivalence
 This functionality is described by the ```simple_equivalence.py``` script and finds redundancy (equivalence) between *protected* and *non-protected* attributes of a dataset whose values are **binary**.
 
 The way to run it is the following:
@@ -15,7 +15,7 @@ python simple_equivalence.py dataset_relative_path(.csv) num-total-attributes nu
 
 This terminology will be used in the next scripts as well
 
-##Categorical Equivalence
+## Categorical Equivalence
 This functionality is described by the ```cat_equivalence.py``` script and finds redundancy (equivalence) between *protected* and *non-protected* attributes of a dataset whose values are **categorical**. 
 
 The dataset must have been already treated to categorize all attribute values.
@@ -25,7 +25,7 @@ The way to run it is the following:
 python cat_equivalence.py dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
 ```
 
-##Categorical Implication
+## Categorical Implication
 This functionality is described by the ```cat_implication.py``` script and finds if any *non-protected* attribute **implies** any *protected* attribute of a dataset, whose values are **categorical**. 
 
 The dataset must have been already treated to categorize all attribute values.
