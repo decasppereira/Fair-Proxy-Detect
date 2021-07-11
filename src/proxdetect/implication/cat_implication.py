@@ -15,7 +15,12 @@ import pandas as pd
 import pickle as pkl
 import seaborn as sns
 import matplotlib.pyplot as plt
-from DataInfo import DataInfo, ProxyType
+
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
+  
+import DataInfo
 
 #==============================================================================
 def inputCheck():

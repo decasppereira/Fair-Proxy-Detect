@@ -16,8 +16,12 @@ import pickle as pkl
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics.cluster import normalized_mutual_info_score
-from DataInfo import DataInfo, ProxyType
 
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
+  
+import DataInfo
 #==============================================================================
 def input_check():
     #dataset total-features num-protected protected_1 ... protected_n
