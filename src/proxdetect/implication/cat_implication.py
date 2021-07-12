@@ -10,6 +10,7 @@
 #==============================================================================
 import sys
 import os.path
+import argparse
 from os import path
 import pandas as pd
 import pickle as pkl
@@ -204,25 +205,44 @@ def visualizeAttributeImp(data, np_num, p_num):
     
     plt.show()
 
+
+
 #==============================================================================
 if __name__ == '__main__':
-    inputCheck()
+
     print("==================== Searching for Categorical Implication ==================")
     print()
 
-    # To test both directions an output detailed .txt files #
-    #data_info = DataInfo(sys.argv)
-    #for p_feature in data_info.protected_features:
-     #   detectMarginImp(data_info, p_feature, "right")
-     #   detectMarginImp(data_info, p_feature, "left")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-right', action='store_true')
+    parser.add_argument('-left', action='store_true')
+    parser.add_argument('-both', action='store_true')
+    parser.add_argument('-vis', action='store_true')
+    parser.add_argument('dataset', nargs=1)
+    parser.add_argument('attributes', type=int, nargs='*')
+    args = parser.parse_args()
 
+    # To test both directions and output detailed .txt files #
+    if(args.both):
+        data_info = DataInfo(sys.argv)
+        for p_feature in data_info.protected_features:
+            detectMarginImp(data_info, p_feature, "right")
+            detectMarginImp(data_info, p_feature, "left")
+
+    elif(args.right):
+        data_info = DataInfo(sys.argv)
+        for p_feature in data_info.protected_features:
+            detectMarginImp(data_info, p_feature, "right")
+
+    elif(args.left):
+        data_info = DataInfo(sys.argv)
+        for p_feature in data_info.protected_features:
+            detectMarginImp(data_info, p_feature, "left")
+    
     # To generate visualizations between two attributes #
-    data = pd.read_csv(sys.argv[1])
-    np_num = int(sys.argv[2])
-    p_num = int(sys.argv[3])
-    visualizeAttributeImp(data, np_num, p_num)
-
-    #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
-    #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
-    #plt.show()
+    elif(args.vis):
+        data = pd.read_csv(sys.argv[2])
+        np_num = int(sys.argv[3])
+        p_num = int(sys.argv[4])
+        visualizeAttributeImp(data, np_num, p_num)
 

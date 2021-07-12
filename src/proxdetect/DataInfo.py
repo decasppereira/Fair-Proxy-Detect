@@ -24,11 +24,11 @@ class DataInfo(object):
         Class for representing a dataset, its protected and non-protected features, and possible proxies
     """
     def __init__(self, commands):
-        self.data = pd.read_csv(commands[1])
-        self.num_features = int(commands[2])
-        self.num_protected_features = int(commands[3])
+        self.data = pd.read_csv(commands[2])
+        self.num_features = int(commands[3])
+        self.num_protected_features = int(commands[4])
 
-        self.protected_features = [int(commands[i]) for i in range(4, len(commands))]
+        self.protected_features = [int(commands[i]) for i in range(5, len(commands))]
         self.non_protected_features = np.setdiff1d([range(self.num_features - 1)],self.protected_features)
 
         self.feature_labels  = self.data.columns

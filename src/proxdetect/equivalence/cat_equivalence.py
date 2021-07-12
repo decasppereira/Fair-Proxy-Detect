@@ -11,6 +11,7 @@
 import sys
 import os.path
 from os import path
+import argparse
 import pandas as pd
 import pickle as pkl
 import seaborn as sns
@@ -20,8 +21,8 @@ from sklearn.metrics.cluster import normalized_mutual_info_score
 current = os.path.dirname(os.path.realpath(__file__))
 parent = os.path.dirname(current)
 sys.path.append(parent)
-  
 import DataInfo
+
 #==============================================================================
 def input_check():
     #dataset total-features num-protected protected_1 ... protected_n
@@ -40,7 +41,7 @@ def show_info():
     print("\t dataset_path(.pkl) total-feature-number protected-features-number protected_feature_1 ... protected_feature_n")
 
 #==============================================================================
-def detect_cat_eq(data_info, proc_num):
+def detectAbsEq(data_info, proc_num):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
     print('Searching proxies for feature '+feature_labels[proc_num])
@@ -140,21 +141,46 @@ def generatePairCount(data_info, proc_num, nproc_num):
 
 #==============================================================================
 if __name__ == '__main__':
-    input_check()
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-vis', action='store_true')
+    parser.add_argument('-nmi', action='store_true')
+    parser.add_argument('-counts', action='store_true')
+    parser.add_argument('-abs', action='store_true')
+    parser.add_argument('dataset', nargs=1)
+    parser.add_argument('attributes', type=int, nargs='*')
+    args = parser.parse_args()
+
     data_info = DataInfo(sys.argv)
     
 
     print("==================== Searching for Categorical Equivalence ==================")
     print()
-    #for p_feature in data_info.protected_features:
-    #    detectMarginEq(data_info, p_feature)
 
-    #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
-    #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
-    #plt.show()
-    p_feature = data_info.protected_features[2]
-    for np_feature in data_info.non_protected_features:
-        generatePairCount(data_info, p_feature, np_feature)
+    if args.vis:
+        for p_feature in data_info.protected_features:
+            detectMarginEq(data_info, p_feature)
+
+        feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
+        ax = sns.heatmap(feat_margins, annot=True, fmt="f")
+        plt.show()
+
+    elif args.nmi:
+        for p_feature in data_info.protected_features:
+            detectNMIEq(data_info, p_feature)
+
+        feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
+        ax = sns.heatmap(feat_margins, annot=True, fmt="f")
+        plt.show()
+
+    elif args.counts:
+        p_feature = data_info.protected_features[2]
+        for np_feature in data_info.non_protected_features:
+            generatePairCount(data_info, p_feature, np_feature)
+
+    elif args.abs:
+        for p_feature in data_info.protected_features:
+            detectAbsEq(data_info, p_feature)
 
         
 
