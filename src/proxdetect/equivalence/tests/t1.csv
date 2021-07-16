@@ -1,0 +1,6 @@
+x1, x2, neighbourood, race, t
+A, B, C, D1, B, 1
+A, E, C, D2, B, 0
+B, A, F, D1, B, 1
+A, B, C, B1, W, 0
+A, C, B, B2, W, 1

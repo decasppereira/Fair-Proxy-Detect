@@ -18,10 +18,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics.cluster import normalized_mutual_info_score
 
-current = os.path.dirname(os.path.realpath(__file__))
-parent = os.path.dirname(current)
-sys.path.append(parent)
-import DataInfo
+from DataInfo import *
 
 #==============================================================================
 def input_check():
