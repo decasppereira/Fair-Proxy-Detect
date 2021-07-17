@@ -72,25 +72,41 @@ def detectMarginEq(data_info, proc_num):
     for j in data_info.non_protected_features:
         print('\t Feature '+feature_labels[j]+ ':')
 
-        cat_relations = dict() # In the form {nproc value: [nproc value count, {proc value1: proc value1 count, proc value2, proc value2 count, ...}]}
+        right_relations = dict() # In the form {nproc value: [nproc value count, {proc value1: proc value1 count, proc value2, proc value2 count, ...}]}
+        left_relations = dict() # In the form {proc value: [proc value count, {nproc value1: nproc value1 count, nproc value2, nproc value2 count, ...}]}
         i = 0
         np_feat = data_info.data[feature_labels[j]] #list with all values of non protected feature #j
-        for v in np_feat:
-            if v in cat_relations:
-                cat_relations[v][0] +=1 
-                if proc_feat[i] in  cat_relations[v][1]:
-                    cat_relations[v][1][proc_feat[i]] += 1
+        for np_v in np_feat:
+            p_v = proc_feat[i]
+            if np_v in right_relations:
+                right_relations[np_v][0] +=1 
+                if p_v in  right_relations[np_v][1]:
+                    right_relations[np_v][1][p_v] += 1
                 else:
-                    cat_relations[v][1][proc_feat[i]] = 1
-            else: 
-                cat_relations[v] = [1, {proc_feat[i]: 1}]
+                    right_relations[np_v][1][p_v] = 1
+            else:  
+                right_relations[np_v] = [1, {p_v: 1}]
+
+            if p_v in left_relations:
+                left_relations[p_v][0] +=1 
+                if np_v in  left_relations[p_v][1]:
+                    left_relations[p_v][1][np_v] += 1
+                else:
+                    left_relations[p_v][1][np_v] = 1
+            else:  
+                left_relations[p_v] = [1, {np_v: 1}]
             
             i = i+1
         
-        for v in cat_relations:
-            abs_occurence = cat_relations[v][0]
-            max_key = max(cat_relations[v][1], key = cat_relations[v][1].get)
-            print(v, max_key, max(cat_relations[v][1].values()) /abs_occurence)
+        for v in right_relations:
+            abs_occurence = right_relations[v][0]
+            max_right = max(right_relations[v][1], key = right_relations[v][1].get)
+            print("\t\t", v, "->", max_right, max(right_relations[v][1].values()) /abs_occurence)
+
+        for v in left_relations:
+            abs_occurence = left_relations[v][0]
+            max_left = max(left_relations[v][1], key = left_relations[v][1].get)
+            print("\t\t", v, "->", max_left, max(left_relations[v][1].values()) /abs_occurence)
 
 #This applies the Normalized Mutual Information definition of a proxy attribute
 def detectNMIEq(data_info, proc_num):
@@ -158,9 +174,9 @@ if __name__ == '__main__':
         for p_feature in data_info.protected_features:
             detectMarginEq(data_info, p_feature)
 
-        feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
-        ax = sns.heatmap(feat_margins, annot=True, fmt="f")
-        plt.show()
+        #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
+        #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
+        #plt.show()
 
     elif args.nmi:
         for p_feature in data_info.protected_features:
