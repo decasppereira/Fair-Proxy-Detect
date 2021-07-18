@@ -69,6 +69,7 @@ def detectMarginEq(data_info, proc_num):
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
     print('Searching proxies for feature '+feature_labels[proc_num])
     
+
     for j in data_info.non_protected_features:
         print('\t Feature '+feature_labels[j]+ ':')
 
@@ -98,15 +99,25 @@ def detectMarginEq(data_info, proc_num):
             
             i = i+1
         
+        margin = 0
         for v in right_relations:
             abs_occurence = right_relations[v][0]
             max_right = max(right_relations[v][1], key = right_relations[v][1].get)
             print("\t\t", v, "->", max_right, max(right_relations[v][1].values()) /abs_occurence)
+            margin += right_relations[v][1][max_right]
+        data_info.right_margins[feature_labels[j]][feature_labels[proc_num]] = np.round(margin/len(data_info.data), 2)
 
+
+        margin = 0
         for v in left_relations:
             abs_occurence = left_relations[v][0]
             max_left = max(left_relations[v][1], key = left_relations[v][1].get)
             print("\t\t", v, "->", max_left, max(left_relations[v][1].values()) /abs_occurence)
+            margin += (left_relations[v][1][max_left])
+
+        data_info.left_margins[feature_labels[proc_num]][feature_labels[j]] = np.round(margin/len(data_info.data), 2)
+
+      
 
 #This applies the Normalized Mutual Information definition of a proxy attribute
 def detectNMIEq(data_info, proc_num):
@@ -165,18 +176,38 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     data_info = DataInfo(sys.argv)
-    
+    feature_labels  = data_info.data.columns
 
     print("==================== Searching for Categorical Equivalence ==================")
     print()
 
     if args.vis:
-        for p_feature in data_info.protected_features:
-            detectMarginEq(data_info, p_feature)
+        attribute_margins = dict()
+        for p in data_info.protected_features:
+            detectMarginEq(data_info, p)
+            attribute_margins[feature_labels[p]] = {}
 
-        #feat_margins = pd.DataFrame.from_dict(data_info.feature_margins)
-        #ax = sns.heatmap(feat_margins, annot=True, fmt="f")
-        #plt.show()
+        for p in data_info.protected_features:
+            for np in data_info.non_protected_features:
+                p_name = feature_labels[p]
+                np_name = feature_labels[np]
+                attribute_margins[p_name][np_name] = min(data_info.left_margins[p_name][np_name], data_info.right_margins[np_name][p_name])
+        
+        left = pd.DataFrame.from_dict(data_info.left_margins).transpose()
+        right = pd.DataFrame.from_dict(data_info.right_margins).transpose()
+        feat_margins = pd.DataFrame.from_dict(attribute_margins)
+
+        f, (ax1, ax2, ax3) = plt.subplots(ncols=3)
+
+        sns.heatmap(left, annot=True, fmt = 'g', ax=ax2)
+        sns.heatmap(right, annot=True, fmt = 'g', ax=ax1)
+        sns.heatmap(feat_margins, annot=True, fmt="g", ax=ax3)
+
+        ax1.set_title("Non Protected -> Protected")
+        ax2.set_title("Protected -> Non Protected")
+        ax3.set_title("Equivalence")
+
+        plt.show()
 
     elif args.nmi:
         for p_feature in data_info.protected_features:

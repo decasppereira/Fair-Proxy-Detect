@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 current = os.path.dirname(os.path.realpath(__file__))
 parent = os.path.dirname(current)
 sys.path.append(parent)
-import DataInfo
+from DataInfo import *
 
 #==============================================================================
 def inputCheck():
@@ -66,7 +66,7 @@ def detectAbsoluteImp(data_info, proc_num):
         if( eq ):
             print('\t \t implies ' + feature_labels[proc_num])
         
-def detectMarginImp(data_info, proc_num, direction):
+def detectMarginImp(data_info, proc_num, direction, vis=False):
     feature_labels  = data_info.data.columns
     proc_feat = data_info.data[feature_labels[proc_num]] #list with all values of the protected feature
    
@@ -134,7 +134,8 @@ def detectMarginImp(data_info, proc_num, direction):
 
                 #print("\t\t{} implies {} {} of times".format(v, max_key, round(cat_relations[v][1][max_key]/abs_occurence, 3) ))
 
-            print("\t\t\t {} implies {} {} of times".format(feature_labels[proc_num], feature_labels[j] , margin))
+            print("\t\t\t {} implies {} {} of tismes".format(feature_labels[proc_num], feature_labels[j] , margin))
+
 
 def visualizeAttributeImp(data, np_num, p_num):
     feature_labels  = data.columns

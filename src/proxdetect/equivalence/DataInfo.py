@@ -40,9 +40,13 @@ class DataInfo(object):
             print("\t" + self.feature_labels[f_num])
         
 
-        self.feature_margins = {}
+        self.left_margins = {}
         for proc in self.protected_features:
-            self.feature_margins[self.feature_labels[proc]] = {}
+            self.left_margins[self.feature_labels[proc]] = {}
+
+        self.right_margins = {}
+        for nproc in self.non_protected_features:
+            self.right_margins[self.feature_labels[nproc]] = {}
 
         self.potential_proxies = {}
         for proc in self.protected_features:
