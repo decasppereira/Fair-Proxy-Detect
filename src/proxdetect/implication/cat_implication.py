@@ -170,6 +170,8 @@ def visualizeAttributeImp(data, np_num, p_num):
             right_implication[nproc_value] = [1, {proc_value: 1}]
 
     left_imp_scores = dict()
+    right_imp_scores = dict()
+
     for v in left_implication: 
         abs_occurence = left_implication[v][0]
         for nproc_value in left_implication[v][1]:
@@ -178,9 +180,8 @@ def visualizeAttributeImp(data, np_num, p_num):
             else:
                 left_imp_scores[v] = {nproc_value: round(left_implication[v][1][nproc_value]/abs_occurence, 3) }
 
-    print(left_imp_scores)
+    #print(left_imp_scores)
 
-    right_imp_scores = dict()
     for v in right_implication: 
         abs_occurence = right_implication[v][0]
         for proc_value in right_implication[v][1]:
@@ -189,17 +190,18 @@ def visualizeAttributeImp(data, np_num, p_num):
             else:
                 right_imp_scores[v] = {proc_value: round(right_implication[v][1][proc_value]/abs_occurence, 3) }
 
-    print(right_imp_scores)
+    #print(right_imp_scores)
 
-    left = pd.DataFrame.from_dict(left_imp_scores).transpose()
-    right = pd.DataFrame.from_dict(right_imp_scores).transpose()
+    left = pd.DataFrame.from_dict(left_imp_scores).transpose().fillna(0)
+    print(left)
+    right = pd.DataFrame.from_dict(right_imp_scores).transpose().fillna(0)
 
     f, (ax1, ax2) = plt.subplots(ncols=2)
 
+    
+    sns.heatmap(left, cmap="mako", annot=True, fmt = 'g', ax=ax2)
+    sns.heatmap(right, cmap="mako", annot=True, fmt = 'g', ax=ax1)
 
-    sns.heatmap(left, annot=True, fmt = 'g', ax=ax2)
-    sns.heatmap(right, annot=True, fmt = 'g', ax=ax1)
- 
     ax1.set_title("{} -> {}".format(feature_labels[np_num], feature_labels[p_num]))
     ax2.set_title("{} -> {}".format(feature_labels[p_num], feature_labels[np_num]))
     
