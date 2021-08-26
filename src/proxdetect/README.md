@@ -20,22 +20,47 @@ This functionality is described by the ```cat_equivalence.py``` script and finds
 
 The dataset must have been already treated to categorize all attribute values.
 
-The way to run it is the following:
+There are several running modes:
+* **Visualization**. This will calculate the implication scores in both directions as well as the equivalence scores. Then, it generates a visualization summarizing the results. 
 ``` 
-python cat_equivalence.py dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+python cat_equivalence.py -vis dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
 ```
+* **Normalized Mutual Information Scores**
+``` 
+python cat_equivalence.py -nmi dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+```
+
+* **Absolute Equivalence**. This detects if the dataset has any perfectly equivalent attributes.
+``` 
+python cat_equivalence.py -abs dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+```
+
 
 ## Categorical Implication
 This functionality is described by the ```cat_implication.py``` script and finds if any *non-protected* attribute **implies** any *protected* attribute of a dataset, whose values are **categorical**. 
 
 The dataset must have been already treated to categorize all attribute values.
 
-The way to run it is the following:
+There are several running modes:
+* **Both Directions**.
 ``` 
-python cat_implication.py dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+python cat_implication.py -both dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+```
+* **Unprotected -> Protected**.
+``` 
+python cat_implication.py -right dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+```
+* **Protected -> Unprotected**.
+``` 
+python cat_implication.py -left dataset_relative_path(.csv) num-total-attributes num-protected-attributes protected_feature_1 ... protected_feature_n
+```
+* **Visualization**.
+``` 
+python cat_implication.py -vis dataset_relative_path(.csv) unprotected_feature protected_feature
 ```
 
-##Datasets and Running Instructions
+
+## Datasets and Running Instructions
 ### COMPAS
 COMPAS comprises a list of criminals and their **recidivism classification**. It has a total of **12 attributes**, where **6** of them are *protected*:
 
@@ -58,8 +83,8 @@ To run the aforemetioned scripts:
 
 ```
 python simple_equivalence.py ../../../bench/compas/compas.csv 12 6 4 5 6 7 8 9
-python cat_equivalence.py ../../../bench/compas/compas.csv 12 6 4 5 6 7 8 9
-python cat_implication.py ../../../bench/compas/compas.csv 12 6 4 5 6 7 8 9
+python cat_equivalence.py -vis ../../../bench/compas/compas.csv 12 6 4 5 6 7 8 9
+python cat_implication.py -both ../../../bench/compas/compas.csv 12 6 4 5 6 7 8 9
 ```
 
 ### Adult
@@ -83,8 +108,8 @@ It has a total of **13 attributes**, where **3** of them are *protected*:
 To run the aforemetioned scripts: 
 ```
 python simple_equivalence.py ../../../bench/adult/adult_data.csv 13 3 0 6 7
-python cat_equivalence.py ../../../bench/adult/adult_data.csv 13 3 0 6 7
-python cat_implication.py ../../../bench/adult/adult_data.csv 13 3 0 6 7    
+python cat_equivalence.py -vis ../../../bench/adult/adult_data.csv 13 3 0 6 7
+python cat_implication.py -both ../../../bench/adult/adult_data.csv 13 3 0 6 7    
 ```
 
 
@@ -119,8 +144,8 @@ It has a total of **22 attributes**, where **6** of them are *protected*:
 To run the aforemetioned scripts: 
 ```
 python simple_equivalence.py ../../../bench/german-credit/german_data.csv 22 3 12 13 20
-python cat_equivalence.py ../../../bench/german-credit/german_data.csv 22 3 12 13 20
-python cat_implication.py ../../../bench/german-credit/german_data.csv 22 3 12 13 20    
+python cat_equivalence.py -vis ../../../bench/german-credit/german_data.csv 22 3 12 13 20
+python cat_implication.py -both ../../../bench/german-credit/german_data.csv 22 3 12 13 20    
 ```
 
 ### Titanic
@@ -138,7 +163,7 @@ It has a total of **8 attributes**, where **2** of them are *protected*:
 To run the aforemetioned scripts: 
 ```
 python simple_equivalence.py ../../../bench/titanic/titanic_data.csv 8 2 2 3
-python cat_equivalence.py ../../../bench/titanic/titanic_data.csv 8 2 2 3
-python cat_implication.py ../../../bench/titanic/titanic_data.csv 8 2 2 3 
+python cat_equivalence.py -vis ../../../bench/titanic/titanic_data.csv 8 2 2 3
+python cat_implication.py -both ../../../bench/titanic/titanic_data.csv 8 2 2 3 
 ```
 
